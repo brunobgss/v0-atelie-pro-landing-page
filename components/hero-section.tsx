@@ -4,75 +4,88 @@ import { Play, CheckCircle2, Sparkles } from "lucide-react"
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-purple-50 via-white to-pink-50 py-20 md:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 md:py-32">
+      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full blur-3xl animate-float" />
+        <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-purple-500/40 to-pink-500/40 rounded-full blur-3xl animate-pulse" />
         <div
-          className="absolute bottom-20 left-10 w-[500px] h-[500px] bg-gradient-to-br from-violet-400/20 to-fuchsia-400/20 rounded-full blur-3xl animate-float"
+          className="absolute bottom-20 left-10 w-[500px] h-[500px] bg-gradient-to-br from-violet-500/30 to-fuchsia-500/30 rounded-full blur-3xl animate-pulse"
           style={{ animationDelay: "1s" }}
         />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-purple-300/10 to-pink-300/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-br from-purple-400/20 to-pink-400/20 rounded-full blur-3xl animate-spin" style={{ animationDuration: "20s" }} />
+        
+        {/* Floating particles */}
+        <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-purple-400 rounded-full animate-bounce" style={{ animationDelay: "0.5s" }} />
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: "1.5s" }} />
+        <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-violet-400 rounded-full animate-bounce" style={{ animationDelay: "2s" }} />
+        
+        {/* Grid pattern overlay */}
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
       </div>
 
       <div className="container relative">
         <div className="mx-auto max-w-5xl text-center">
           <Badge
             variant="secondary"
-            className="mb-6 px-4 py-2 text-sm font-medium shadow-lg shadow-purple-200/50 border border-purple-200/50"
+            className="mb-6 px-6 py-3 text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-400/30 text-white shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
           >
-            <Sparkles className="w-3 h-3 mr-1 inline" />7 dias grátis • Sem cartão • Sem compromisso
+            <Sparkles className="w-4 h-4 mr-2 inline animate-pulse" />7 dias grátis • Sem cartão • Sem compromisso
           </Badge>
 
-          <h1 className="mb-6 text-4xl font-bold tracking-tight text-balance text-foreground md:text-6xl lg:text-7xl font-serif">
+          <h1 className="mb-6 text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:text-7xl font-serif bg-gradient-to-r from-white via-purple-100 to-pink-100 bg-clip-text text-transparent animate-fade-in">
             Gerencie Seu Ateliê Como um Profissional
           </h1>
 
-          <p className="mb-10 text-lg text-pretty text-muted-foreground md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed">
+          <p className="mb-10 text-lg text-pretty text-purple-100 md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
             Sistema completo de gestão para ateliês, confecções e bordados. Calculadora de preços, controle de pedidos,
             integração WhatsApp e muito mais.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button
               size="lg"
-              className="text-base px-8 h-12 shadow-xl shadow-purple-500/30 hover:shadow-2xl hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300 bg-gradient-to-r from-purple-600 to-pink-600"
+              className="text-base px-10 h-14 shadow-2xl shadow-purple-500/40 hover:shadow-3xl hover:shadow-purple-500/60 hover:scale-110 transition-all duration-300 bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 hover:from-purple-500 hover:via-purple-400 hover:to-pink-500 text-white font-semibold border-0"
             >
+              <Sparkles className="w-5 h-5 mr-2" />
               Começar Teste Grátis — 7 Dias
             </Button>
             <Button
               size="lg"
               variant="outline"
-              className="text-base px-8 h-12 gap-2 bg-white/80 backdrop-blur-sm hover:bg-white hover:shadow-lg transition-all duration-300"
+              className="text-base px-10 h-14 gap-3 bg-white/10 backdrop-blur-md hover:bg-white/20 hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 border-white/30 text-white hover:scale-105"
             >
-              <Play className="h-4 w-4" />
+              <Play className="h-5 w-5" />
               Ver Demonstração
             </Button>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground mb-16">
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-primary" />
+          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-purple-200 mb-16 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <CheckCircle2 className="h-4 w-4 text-green-400" />
               <span>Sem instalação</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-primary" />
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <CheckCircle2 className="h-4 w-4 text-green-400" />
               <span>Backup automático</span>
             </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle2 className="h-4 w-4 text-primary" />
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <CheckCircle2 className="h-4 w-4 text-green-400" />
               <span>Suporte especializado</span>
             </div>
           </div>
         </div>
 
-        <div className="mx-auto mt-8 max-w-6xl">
-          <div className="relative rounded-2xl border-2 border-purple-200/50 bg-white shadow-2xl shadow-purple-500/20 overflow-hidden hover:shadow-3xl hover:shadow-purple-500/30 transition-all duration-500 hover:scale-[1.02]">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5" />
+        <div className="mx-auto mt-8 max-w-6xl animate-fade-in" style={{ animationDelay: "0.8s" }}>
+          <div className="relative rounded-3xl border border-purple-400/30 bg-white/5 backdrop-blur-sm shadow-2xl shadow-purple-500/30 overflow-hidden hover:shadow-3xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-[1.02] group">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 group-hover:from-purple-500/20 group-hover:to-pink-500/20 transition-all duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent" />
             <img
               src="/dashboard-screenshot.png"
               alt="Ateliê Pro Dashboard - Interface de gestão moderna"
-              className="w-full h-full object-cover relative z-10"
+              className="w-full h-full object-cover relative z-10 group-hover:scale-105 transition-transform duration-700"
             />
+            {/* Glow effect */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500 -z-10" />
           </div>
         </div>
       </div>

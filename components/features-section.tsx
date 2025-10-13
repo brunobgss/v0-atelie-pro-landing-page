@@ -170,7 +170,7 @@ export function FeaturesSection() {
           </div>
 
           <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-center">Destaques Principais</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Destaques Principais</h3>
             <div className="grid lg:grid-cols-2 gap-8">
               {features
                 .filter((f) => f.priority === "high")
@@ -179,20 +179,22 @@ export function FeaturesSection() {
                   return (
                     <Card
                       key={index}
-                      className="border-2 border-purple-200/50 hover:border-purple-400 transition-all duration-300 shadow-lg shadow-purple-500/10 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1 bg-white"
+                      className="group border-2 border-purple-200/30 hover:border-purple-400/60 transition-all duration-500 shadow-xl shadow-purple-500/10 hover:shadow-2xl hover:shadow-purple-500/30 hover:-translate-y-3 hover:scale-105 bg-white/90 backdrop-blur-sm animate-fade-in"
+                      style={{ animationDelay: `${index * 0.2}s` }}
                     >
-                      <CardHeader>
-                        <div className="flex items-start gap-4 mb-4">
-                          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-pink-600 shrink-0 shadow-lg shadow-purple-500/30">
-                            <Icon className="h-6 w-6 text-white" />
+                      <CardHeader className="relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-pink-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="flex items-start gap-4 mb-4 relative z-10">
+                          <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-purple-600 via-purple-500 to-pink-600 shrink-0 shadow-xl shadow-purple-500/40 group-hover:shadow-2xl group-hover:shadow-purple-500/60 group-hover:scale-110 transition-all duration-300">
+                            <Icon className="h-7 w-7 text-white group-hover:animate-pulse" />
                           </div>
                           <div>
-                            <CardTitle className="text-xl mb-2">{feature.title}</CardTitle>
-                            <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                            <CardTitle className="text-xl mb-2 group-hover:text-purple-700 transition-colors">{feature.title}</CardTitle>
+                            <p className="text-sm text-slate-600 leading-relaxed">{feature.description}</p>
                           </div>
                         </div>
                         {feature.screenshot && (
-                          <div className="rounded-xl overflow-hidden border-2 border-purple-100 shadow-md hover:shadow-xl transition-shadow duration-300">
+                          <div className="rounded-2xl overflow-hidden border border-purple-200/50 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
                             <img
                               src={feature.screenshot || "/placeholder.svg"}
                               alt={feature.title}
@@ -201,11 +203,13 @@ export function FeaturesSection() {
                           </div>
                         )}
                       </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2">
+                      <CardContent className="relative z-10">
+                        <ul className="space-y-3">
                           {feature.bullets.map((bullet, bulletIndex) => (
-                            <li key={bulletIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                              <span className="text-primary mt-1">✓</span>
+                            <li key={bulletIndex} className="flex items-start gap-3 text-sm text-slate-600">
+                              <div className="flex h-5 w-5 items-center justify-center rounded-full bg-gradient-to-r from-green-500 to-emerald-500 shrink-0 mt-0.5">
+                                <span className="text-white text-xs font-bold">✓</span>
+                              </div>
                               <span className="leading-relaxed">{bullet}</span>
                             </li>
                           ))}
@@ -218,7 +222,7 @@ export function FeaturesSection() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-center">Funcionalidades Completas</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Funcionalidades Completas</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features
                 .filter((f) => f.priority !== "high")
@@ -227,22 +231,26 @@ export function FeaturesSection() {
                   return (
                     <Card
                       key={index}
-                      className="border border-purple-100 hover:border-purple-300 transition-all duration-300 hover:shadow-xl hover:shadow-purple-500/10 hover:-translate-y-1 bg-white"
+                      className="group border border-purple-200/40 hover:border-purple-400/60 transition-all duration-500 hover:shadow-xl hover:shadow-purple-500/15 hover:-translate-y-2 hover:scale-105 bg-white/80 backdrop-blur-sm animate-fade-in"
+                      style={{ animationDelay: `${(index + 2) * 0.1}s` }}
                     >
-                      <CardHeader>
-                        <div className="flex items-start gap-3 mb-3">
-                          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br from-purple-500 to-pink-500 shrink-0 shadow-md shadow-purple-500/30">
-                            <Icon className="h-5 w-5 text-white" />
+                      <CardHeader className="relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-purple-500/3 to-pink-500/3 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                        <div className="flex items-start gap-3 mb-3 relative z-10">
+                          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-purple-500 via-purple-400 to-pink-500 shrink-0 shadow-lg shadow-purple-500/30 group-hover:shadow-xl group-hover:shadow-purple-500/50 group-hover:scale-110 transition-all duration-300">
+                            <Icon className="h-6 w-6 text-white group-hover:animate-pulse" />
                           </div>
-                          <CardTitle className="text-lg leading-tight">{feature.title}</CardTitle>
+                          <CardTitle className="text-lg leading-tight group-hover:text-purple-700 transition-colors">{feature.title}</CardTitle>
                         </div>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{feature.description}</p>
+                        <p className="text-sm text-slate-600 leading-relaxed relative z-10">{feature.description}</p>
                       </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-1.5">
+                      <CardContent className="relative z-10">
+                        <ul className="space-y-2">
                           {feature.bullets.map((bullet, bulletIndex) => (
-                            <li key={bulletIndex} className="flex items-start gap-2 text-xs text-muted-foreground">
-                              <span className="text-primary mt-0.5">•</span>
+                            <li key={bulletIndex} className="flex items-start gap-2 text-xs text-slate-600">
+                              <div className="flex h-4 w-4 items-center justify-center rounded-full bg-gradient-to-r from-emerald-500 to-green-500 shrink-0 mt-0.5">
+                                <span className="text-white text-xs font-bold">•</span>
+                              </div>
                               <span className="leading-relaxed">{bullet}</span>
                             </li>
                           ))}
