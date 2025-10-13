@@ -1,0 +1,17 @@
+{
+  "name": "atelie-pro-landing-page",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "next build && next export",
+    "dev": "next dev",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "npm run build && surge out/ --domain atelie-pro-moderno.surge.sh"
+  },
+  "dependencies": {
+    "next": "15.2.4",
+    "react": "^19",
+    "react-dom": "^19"
+  }
+}
