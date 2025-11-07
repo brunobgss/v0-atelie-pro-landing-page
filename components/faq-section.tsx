@@ -36,7 +36,7 @@ const faqs = [
 export function FAQSection() {
   return (
     <section id="faq" className="py-20 md:py-28 bg-muted/30">
-      <div className="container">
+      <div className="container px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-balance text-foreground md:text-4xl lg:text-5xl mb-4">

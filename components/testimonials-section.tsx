@@ -56,7 +56,7 @@ export function TestimonialsSection() {
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0.6))] -z-10" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -z-10" />
 
-      <div className="container relative">
+      <div className="container relative px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4 border-primary/20 bg-primary/5">

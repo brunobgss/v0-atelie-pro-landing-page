@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Play, CheckCircle2, Sparkles } from "lucide-react"
+import Link from "next/link"
 
 export function HeroSection() {
   return (
@@ -20,10 +21,10 @@ export function HeroSection() {
         <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-violet-400 rounded-full animate-bounce" style={{ animationDelay: "2s" }} />
         
         {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.05"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30" />
+        <div className='absolute inset-0 bg-[url("data:image/svg+xml,%3Csvg width=%2260%22 height=%2260%22 viewBox=%220 0 60 60%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cg fill=%22none%22 fill-rule=%22evenodd%22%3E%3Cg fill=%22%239C92AC%22 fill-opacity=%220.05%22%3E%3Ccircle cx=%2230%22 cy=%2230%22 r=%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")] opacity-30' />
       </div>
 
-      <div className="container relative">
+      <div className="container relative px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl text-center">
           <Badge
             variant="secondary"
@@ -33,29 +34,38 @@ export function HeroSection() {
           </Badge>
 
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:text-7xl font-serif bg-gradient-to-r from-white via-purple-100 to-pink-100 bg-clip-text text-transparent animate-fade-in">
-            Gerencie Seu Ateliê Como um Profissional
+            O ERP criativo que centraliza sua gestão de ateliê e confecção
           </h1>
 
-          <p className="mb-10 text-lg text-pretty text-purple-100 md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Sistema completo de gestão para ateliês, confecções e bordados. Calculadora de preços, controle de pedidos,
-            integração WhatsApp e muito mais.
+          <p
+            className="mb-10 text-lg text-pretty text-purple-100 md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Sistema SaaS especializado em confecções e ateliês criativos: organize pedidos, precifique com inteligência,
+            integre WhatsApp e emita notas fiscais em poucos cliques. De bordados a linhas de produção, o Ateliê Pro mantém seu fluxo produtivo sob controle.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button
               size="lg"
+              asChild
               className="text-base px-10 h-14 shadow-2xl shadow-purple-500/40 hover:shadow-3xl hover:shadow-purple-500/60 hover:scale-110 transition-all duration-300 bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 hover:from-purple-500 hover:via-purple-400 hover:to-pink-500 text-white font-semibold border-0"
             >
-              <Sparkles className="w-5 h-5 mr-2" />
-              Começar Teste Grátis — 7 Dias
+              <Link href="https://app.ateliepro.online" target="_blank" rel="noopener noreferrer">
+                <Sparkles className="w-5 h-5 mr-2" />
+                Começar Teste Grátis — 7 Dias
+              </Link>
             </Button>
             <Button
               size="lg"
               variant="outline"
+              asChild
               className="text-base px-10 h-14 gap-3 bg-white/10 backdrop-blur-md hover:bg-white/20 hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 border-white/30 text-white hover:scale-105"
             >
-              <Play className="h-5 w-5" />
-              Ver Demonstração
+              <Link href="#demo-video" data-analytics="cta-hero-demo" aria-label="Ver demonstração em vídeo do Ateliê Pro">
+                <Play className="h-5 w-5" />
+                Ver demonstração
+              </Link>
             </Button>
           </div>
 

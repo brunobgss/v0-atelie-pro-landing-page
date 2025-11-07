@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import {
   Calculator,
   LayoutDashboard,
@@ -85,7 +86,7 @@ export function AppDemoSection() {
 
   return (
     <section className="py-24 bg-gradient-to-b from-white to-purple-50/30">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">Conheça o Sistema por Dentro</h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
@@ -161,9 +162,14 @@ export function AppDemoSection() {
         {/* CTA */}
         <div className="text-center mt-16">
           <p className="text-slate-600 mb-6 text-lg">Pronto para experimentar todas essas funcionalidades?</p>
-          <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+          <Link 
+            href="https://app.ateliepro.online" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+          >
             Começar Teste Grátis de 7 Dias
-          </button>
+          </Link>
         </div>
       </div>
     </section>

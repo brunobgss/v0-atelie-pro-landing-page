@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Sparkles, CheckCircle2 } from "lucide-react"
+import Link from "next/link"
 
 export function CTASection() {
   return (
@@ -15,28 +16,37 @@ export function CTASection() {
       <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-pink-400 rounded-full animate-bounce" style={{ animationDelay: "1.5s" }} />
       <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-violet-400 rounded-full animate-bounce" style={{ animationDelay: "2s" }} />
 
-      <div className="container relative">
+      <div className="container relative px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-4xl text-center">
           <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-semibold mb-8 shadow-2xl hover:bg-white/20 transition-all duration-300 animate-fade-in">
             <Sparkles className="h-5 w-5 animate-pulse" />
             Oferta Especial de Lançamento
           </div>
 
-          <h2 className="text-3xl font-bold tracking-tight text-balance md:text-5xl lg:text-6xl mb-6 drop-shadow-lg bg-gradient-to-r from-white via-purple-100 to-pink-100 bg-clip-text text-transparent animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            Comece Seu Teste Grátis Agora
+          <h2
+            className="text-3xl font-bold tracking-tight text-balance md:text-5xl lg:text-6xl mb-6 drop-shadow-lg bg-gradient-to-r from-white via-purple-100 to-pink-100 bg-clip-text text-transparent animate-fade-in"
+            style={{ animationDelay: "0.2s" }}
+          >
+            Teste o ERP criativo referência em gestão de ateliês
           </h2>
 
-          <p className="text-lg md:text-xl text-purple-100 mb-10 max-w-2xl mx-auto text-pretty leading-relaxed drop-shadow animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            Junte-se a centenas de ateliês que já transformaram seus negócios com o Ateliê Pro
+          <p
+            className="text-lg md:text-xl text-purple-100 mb-10 max-w-2xl mx-auto text-pretty leading-relaxed drop-shadow animate-fade-in"
+            style={{ animationDelay: "0.4s" }}
+          >
+            Junte-se a centenas de estúdios criativos que otimizam fluxos de produção, notas fiscais e finanças com o Ateliê Pro.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in" style={{ animationDelay: "0.6s" }}>
             <Button
               size="lg"
+              asChild
               className="text-base px-12 h-16 gap-3 shadow-2xl hover:shadow-3xl transition-all hover:scale-110 font-semibold text-lg group bg-gradient-to-r from-white to-purple-50 text-purple-900 hover:from-purple-50 hover:to-white border-0"
             >
-              Começar Agora - É Grátis
-              <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
+              <Link href="https://app.ateliepro.online" target="_blank" rel="noopener noreferrer">
+                Começar Agora - É Grátis
+                <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
+              </Link>
             </Button>
           </div>
 

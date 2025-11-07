@@ -155,7 +155,7 @@ const features = [
 export function FeaturesSection() {
   return (
     <section id="funcionalidades" className="py-20 md:py-28 bg-white">
-      <div className="container">
+      <div className="container px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">

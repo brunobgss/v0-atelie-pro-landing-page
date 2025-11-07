@@ -4,7 +4,7 @@ import { Calendar, Bell, Clock, CheckCircle2 } from "lucide-react"
 export function AgendaFeatureSection() {
   return (
     <section className="py-24 bg-gradient-to-b from-white to-orange-50/30">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left: Content */}
