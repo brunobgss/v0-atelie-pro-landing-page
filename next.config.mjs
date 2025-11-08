@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? ""
+
 const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
@@ -9,9 +11,10 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  output: 'export',
-  trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/v0-atelie-pro-landing-page' : '',
+  output: "export",
+  basePath,
+  assetPrefix: basePath || undefined,
+  trailingSlash: Boolean(basePath),
 }
 
 export default nextConfig
