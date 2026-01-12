@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import Image from "next/image"
 import {
   Calculator,
   MessageSquare,
@@ -195,10 +196,13 @@ export function FeaturesSection() {
                         </div>
                         {feature.screenshot && (
                           <div className="rounded-2xl overflow-hidden border border-purple-200/50 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
-                            <img
+                            <Image
                               src={feature.screenshot || "/placeholder.svg"}
                               alt={feature.title}
+                              width={800}
+                              height={450}
                               className="w-full h-auto object-cover"
+                              quality={85}
                             />
                           </div>
                         )}

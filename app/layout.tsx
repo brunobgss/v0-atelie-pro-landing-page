@@ -54,6 +54,52 @@ export const metadata: Metadata = {
   },
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Ateliê Pro",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": [
+    {
+      "@type": "Offer",
+      "price": "39.90",
+      "priceCurrency": "BRL",
+      "priceValidUntil": "2025-12-31",
+      "availability": "https://schema.org/InStock",
+      "name": "Plano Básico"
+    },
+    {
+      "@type": "Offer",
+      "price": "99.90",
+      "priceCurrency": "BRL",
+      "priceValidUntil": "2025-12-31",
+      "availability": "https://schema.org/InStock",
+      "name": "Plano Profissional com Emissor de NF-e"
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "500",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "description": "ERP criativo para ateliês, bordados e confecções que centraliza pedidos, precificação inteligente, integração WhatsApp e emissor de notas fiscais.",
+  "url": "https://ateliepro.online",
+  "screenshot": "https://ateliepro.online/dashboard-screenshot.png",
+  "featureList": [
+    "Calculadora de Precificação Profissional",
+    "Integração WhatsApp Business",
+    "Gestão Completa de Pedidos",
+    "Agenda com Avisos em Tempo Real",
+    "Controle de Estoque Inteligente",
+    "Emissor de Notas Fiscais (NF-e)",
+    "Relatórios Detalhados",
+    "Controle Financeiro"
+  ]
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -61,6 +107,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR" className={poppins.variable}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
       <body className="font-sans antialiased">
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />

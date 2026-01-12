@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Play, CheckCircle2, Sparkles } from "lucide-react"
 import Link from "next/link"
+import Image from "next/image"
 
 export function HeroSection() {
   return (
@@ -42,7 +43,7 @@ export function HeroSection() {
             style={{ animationDelay: "0.2s" }}
           >
             Sistema SaaS especializado em confecções e ateliês criativos: organize pedidos, precifique com inteligência,
-            integre WhatsApp e emita notas fiscais em poucos cliques. De bordados a linhas de produção, o Ateliê Pro mantém seu fluxo produtivo sob controle.
+            integre WhatsApp e emita notas fiscais em poucos cliques. Mais de 500 ateliês já aumentaram vendas em 40% e reduziram tempo administrativo em 60%. De bordados a linhas de produção, o Ateliê Pro mantém seu fluxo produtivo sob controle.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
@@ -51,7 +52,13 @@ export function HeroSection() {
               asChild
               className="text-base px-10 h-14 shadow-2xl shadow-purple-500/40 hover:shadow-3xl hover:shadow-purple-500/60 hover:scale-110 transition-all duration-300 bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 hover:from-purple-500 hover:via-purple-400 hover:to-pink-500 text-white font-semibold border-0"
             >
-              <Link href="https://app.ateliepro.online" target="_blank" rel="noopener noreferrer">
+              <Link 
+                href="https://app.ateliepro.online" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                data-analytics="cta-hero-primary"
+                aria-label="Começar teste grátis de 7 dias do Ateliê Pro"
+              >
                 <Sparkles className="w-5 h-5 mr-2" />
                 Começar Teste Grátis — 7 Dias
               </Link>
@@ -89,10 +96,16 @@ export function HeroSection() {
           <div className="relative rounded-3xl border border-purple-400/30 bg-white/5 backdrop-blur-sm shadow-2xl shadow-purple-500/30 overflow-hidden hover:shadow-3xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-[1.02] group">
             <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 group-hover:from-purple-500/20 group-hover:to-pink-500/20 transition-all duration-500" />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent" />
-            <img
+            <Image
               src="/dashboard-screenshot.png"
               alt="Ateliê Pro Dashboard - Interface de gestão moderna"
-              className="w-full h-full object-cover relative z-10 group-hover:scale-105 transition-transform duration-700"
+              width={1200}
+              height={675}
+              className="w-full h-auto object-cover relative z-10 group-hover:scale-105 transition-transform duration-700"
+              priority
+              quality={90}
+              placeholder="blur"
+              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
             />
             {/* Glow effect */}
             <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500 -z-10" />

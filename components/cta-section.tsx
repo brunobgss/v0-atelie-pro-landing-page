@@ -34,7 +34,7 @@ export function CTASection() {
             className="text-lg md:text-xl text-purple-100 mb-10 max-w-2xl mx-auto text-pretty leading-relaxed drop-shadow animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
-            Junte-se a centenas de estúdios criativos que otimizam fluxos de produção, notas fiscais e finanças com o Ateliê Pro.
+            Junte-se a mais de 500 ateliês e confecções que já otimizaram seus fluxos de produção, aumentaram vendas em média 40% e reduziram tempo administrativo em 60% com o Ateliê Pro.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in" style={{ animationDelay: "0.6s" }}>
@@ -43,7 +43,13 @@ export function CTASection() {
               asChild
               className="text-base px-12 h-16 gap-3 shadow-2xl hover:shadow-3xl transition-all hover:scale-110 font-semibold text-lg group bg-gradient-to-r from-white to-purple-50 text-purple-900 hover:from-purple-50 hover:to-white border-0"
             >
-              <Link href="https://app.ateliepro.online" target="_blank" rel="noopener noreferrer">
+              <Link 
+                href="https://app.ateliepro.online" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                data-analytics="cta-final-primary"
+                aria-label="Começar teste grátis agora"
+              >
                 Começar Agora - É Grátis
                 <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
               </Link>

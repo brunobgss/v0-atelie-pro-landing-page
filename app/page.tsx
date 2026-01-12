@@ -11,6 +11,7 @@ import { UseCasesSection } from "@/components/use-cases-section"
 import { HowItWorksSection } from "@/components/how-it-works-section"
 import { CalculatorPreviewSection } from "@/components/calculator-preview-section"
 import { BenefitsSection } from "@/components/benefits-section"
+import { ComparisonSection } from "@/components/comparison-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { PricingSection } from "@/components/pricing-section"
 import { FAQSection } from "@/components/faq-section"
@@ -35,6 +36,7 @@ export default function LandingPage() {
         <HowItWorksSection />
         <CalculatorPreviewSection />
         <BenefitsSection />
+        <ComparisonSection />
         <TestimonialsSection />
         <PricingSection />
         <FAQSection />
