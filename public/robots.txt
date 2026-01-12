@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://ateliepro.online/sitemap.xml
+
+# Crawl-delay (opcional, ajuste conforme necessário)
+Crawl-delay: 1

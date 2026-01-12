@@ -35,7 +35,7 @@ export function HeroSection() {
           </Badge>
 
           <h1 className="mb-6 text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:text-7xl font-serif bg-gradient-to-r from-white via-purple-100 to-pink-100 bg-clip-text text-transparent animate-fade-in">
-            O ERP criativo que centraliza sua gestão de ateliê e confecção
+            Sistema para Gestão de Ateliê e Confecção que Centraliza Tudo
           </h1>
 
           <p

@@ -16,41 +16,78 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   title: {
-    default: "Ateliê Pro — ERP criativo para ateliês com emissor de notas fiscais",
+    default: "Sistema para Gestão de Ateliê e Confecção | Ateliê Pro — ERP Criativo",
     template: "%s | Ateliê Pro",
   },
   description:
-    "O Ateliê Pro é o ERP criativo para ateliês, bordados e confecções que centraliza pedidos, precificação inteligente, integração WhatsApp e emissor de notas fiscais em um só lugar.",
+    "Sistema completo para gestão de ateliê e confecção. ERP criativo com emissor de NF-e, calculadora de precificação, integração WhatsApp e controle de pedidos. Teste grátis por 7 dias.",
   keywords: [
-    "gestão criativa",
+    "sistema para gestão de ateliê",
+    "sistema para gestão de confecção",
+    "gestão de ateliê",
+    "gestão de confecção",
     "ERP para ateliê",
+    "ERP para confecção",
+    "software para ateliê",
+    "software para confecção",
+    "sistema de gestão para ateliês",
+    "sistema de gestão para confecções",
+    "gestão criativa",
     "emissor de notas fiscais",
     "sistema para bordados",
     "precificação de ateliê",
-    "software para confecção",
+    "software ERP ateliê",
+    "software ERP confecção",
+    "gestão de pedidos ateliê",
+    "controle de estoque confecção",
   ],
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", type: "image/png", sizes: "180x180" },
+    ],
+  },
   generator: "v0.app",
   alternates: {
     canonical: "https://ateliepro.online",
   },
   openGraph: {
-    title: "Ateliê Pro — ERP criativo para ateliês com emissor de notas fiscais",
+    title: "Sistema para Gestão de Ateliê e Confecção | Ateliê Pro",
     description:
-      "Centralize pedidos, calcule preços profissionais e emita NF-e com o Ateliê Pro. Um único ERP criativo para gestão completa do seu ateliê.",
+      "Sistema completo para gestão de ateliê e confecção. ERP criativo com emissor de NF-e, calculadora de precificação e integração WhatsApp. Teste grátis por 7 dias.",
     type: "website",
     url: "https://ateliepro.online",
     siteName: "Ateliê Pro",
     locale: "pt_BR",
+    images: [
+      {
+        url: "https://ateliepro.online/dashboard-screenshot.png",
+        width: 1200,
+        height: 675,
+        alt: "Dashboard do Ateliê Pro - Sistema para gestão de ateliê e confecção",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ateliê Pro — ERP criativo para ateliês",
+    title: "Sistema para Gestão de Ateliê e Confecção | Ateliê Pro",
     description:
-      "Sistema SaaS completo para gestão de ateliês com emissor de notas fiscais, integração WhatsApp e dashboards de produção.",
+      "ERP criativo completo para gestão de ateliês e confecções com emissor de NF-e, calculadora de precificação e integração WhatsApp.",
+    images: ["https://ateliepro.online/dashboard-screenshot.png"],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 }
 
@@ -59,7 +96,9 @@ const structuredData = {
   "@type": "SoftwareApplication",
   "name": "Ateliê Pro",
   "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "ERP para Ateliês e Confecções",
   "operatingSystem": "Web",
+  "keywords": "sistema para gestão de ateliê, sistema para gestão de confecção, ERP para ateliê, software para confecção, gestão de ateliê, gestão de confecção, sistema de gestão para ateliês, software ERP ateliê",
   "offers": [
     {
       "@type": "Offer",
@@ -108,6 +147,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={poppins.variable}>
       <head>
+        <meta name="google-site-verification" content="FjI2LKCSn8rXl5GiQXA4bcBQ5H279tYb0qSrGDVCT5w" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

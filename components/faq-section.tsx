@@ -2,9 +2,29 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 
 const faqs = [
   {
+    question: "Qual o melhor sistema para gestão de ateliê?",
+    answer:
+      "O Ateliê Pro é o sistema completo para gestão de ateliê e confecção, desenvolvido especificamente para ateliês, bordados e confecções. Com funcionalidades como calculadora de precificação, emissor de NF-e e integração WhatsApp, é a solução ideal para profissionalizar seu negócio. Teste grátis por 7 dias.",
+  },
+  {
+    question: "Como funciona o sistema para gestão de confecção?",
+    answer:
+      "O sistema para gestão de confecção Ateliê Pro centraliza pedidos, controle de estoque, precificação inteligente e emissão de notas fiscais. Tudo em um único lugar, facilitando a gestão completa do seu negócio. Você pode gerenciar múltiplos clientes, produtos e pedidos de forma organizada e profissional.",
+  },
+  {
+    question: "O sistema funciona para ateliês de costura e bordados?",
+    answer:
+      "Sim! O Ateliê Pro foi desenvolvido especialmente para ateliês de costura, bordados e confecções. Inclui calculadora de precificação por pontos (para bordados) e por horas trabalhadas, controle de materiais, gestão de pedidos personalizados e muito mais. Perfeito para ateliês que precisam de um sistema completo de gestão.",
+  },
+  {
     question: "Como funciona o teste grátis?",
     answer:
       "Você tem 7 dias para testar todas as funcionalidades do Ateliê Pro sem precisar cadastrar cartão de crédito. Após o período de teste, você pode escolher continuar com um dos nossos planos.",
+  },
+  {
+    question: "O sistema emite notas fiscais?",
+    answer:
+      "Sim! O Ateliê Pro inclui emissor de notas fiscais eletrônicas (NF-e) integrado. No plano profissional, você pode emitir notas fiscais ilimitadas diretamente do sistema, sem precisar de outro software. O módulo fiscal inclui onboarding guiado e suporte especializado.",
   },
   {
     question: "Posso cancelar a qualquer momento?",
@@ -14,22 +34,22 @@ const faqs = [
   {
     question: "Preciso instalar algum programa?",
     answer:
-      "Não! O Ateliê Pro funciona 100% online através do navegador. Você pode acessar de qualquer computador, tablet ou celular com internet.",
+      "Não! O Ateliê Pro funciona 100% online através do navegador. Você pode acessar de qualquer computador, tablet ou celular com internet. Não há necessidade de instalação ou configuração complexa.",
   },
   {
     question: "Meus dados estão seguros?",
     answer:
-      "Sim! Utilizamos criptografia de ponta e servidores seguros para proteger todos os seus dados. Fazemos backup diário automático de todas as informações.",
+      "Sim! Utilizamos criptografia de ponta e servidores seguros para proteger todos os seus dados. Fazemos backup diário automático de todas as informações. Seus dados de clientes, pedidos e financeiro estão sempre protegidos.",
   },
   {
     question: "Tem limite de pedidos ou clientes?",
     answer:
-      "Não! Você pode cadastrar quantos pedidos, clientes e produtos quiser. Não há limites em nenhum dos nossos planos.",
+      "Não! Você pode cadastrar quantos pedidos, clientes e produtos quiser. Não há limites em nenhum dos nossos planos. O sistema cresce junto com seu negócio.",
   },
   {
     question: "Como funciona o suporte?",
     answer:
-      "Oferecemos suporte via WhatsApp, email e chat dentro do sistema. Nossa equipe responde em até 24 horas em dias úteis. Também temos uma base de conhecimento completa.",
+      "Oferecemos suporte via WhatsApp, email e chat dentro do sistema. Nossa equipe responde em até 24 horas em dias úteis. Para clientes do plano profissional, oferecemos suporte prioritário e treinamento especializado. Também temos uma base de conhecimento completa.",
   },
 ]
 
