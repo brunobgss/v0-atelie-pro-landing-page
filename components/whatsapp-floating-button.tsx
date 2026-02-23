@@ -6,7 +6,7 @@ import { MessageCircle } from "lucide-react"
 
 import { cn } from "@/lib/utils"
 
-const WHATSAPP_URL = "https://wa.me/5535998498798"
+const WHATSAPP_URL = "https://wa.me/5561982321534"
 
 export function WhatsAppFloatingButton() {
   const [isVisible, setIsVisible] = useState(false)
