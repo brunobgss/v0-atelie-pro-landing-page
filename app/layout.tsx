@@ -148,6 +148,18 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={poppins.variable}>
       <head>
+        {/* Google tag (gtag.js) */}
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-MQ6ZJ06CXW"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-MQ6ZJ06CXW');
+            `,
+          }}
+        />
         <meta name="google-site-verification" content="FjI2LKCSn8rXl5GiQXA4bcBQ5H279tYb0qSrGDVCT5w" />
         <script
           type="application/ld+json"
