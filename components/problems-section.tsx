@@ -1,12 +1,12 @@
 import { AlertCircle, ArrowRight } from "lucide-react"
 
 const problems = [
-  "Não sabe quanto cobrar",
-  "Pedidos espalhados pelo WhatsApp",
-  "Atrasos na produção",
-  "Retrabalhos e erros",
-  "Estoque desorganizado",
-  "Falta de profissionalismo no atendimento",
+  "💰 Não sabe quanto cobrar (e deixa dinheiro na mesa)",
+  "📱 Pedidos espalhados no WhatsApp (e alguns desaparecem)",
+  "⏰ Atrasos na produção (e clientes chateados)",
+  "❌ Retrabalhos por falta de especificação clara",
+  "📦 Estoque e materiais totalmente desorganizados",
+  "😰 Parece amadora (clientes não levam a sério)",
 ]
 
 export function ProblemsSection() {
@@ -22,10 +22,12 @@ export function ProblemsSection() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-3xl font-bold tracking-tight text-balance text-slate-900 md:text-4xl lg:text-5xl mb-4 bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent">
-              Problemas que Resolvemos
+              {/* exploração de dores financeiras e emocionais */}
+              O que Está Custando Caro Para Seu Ateliê Agora
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto text-pretty leading-relaxed">
-              Veja como o Ateliê Pro resolve os principais desafios de gestão do seu negócio
+              {/* contexto de urgência: quanto mais desorganizada, mais perde dinheiro */}
+              Cada dia sem sistema é um dia deixando lucro ir embora. Descubra quanto você poderia estar ganhando a mais.
             </p>
           </div>
 

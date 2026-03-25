@@ -6,48 +6,48 @@ const benefits = [
   {
     icon: TrendingUp,
     stat: "+40%",
-    label: "Aumento em vendas",
-    description: "Clientes reportam crescimento médio de 40% nas vendas após implementar o sistema",
+    label: "Mais dinheiro no seu bolso",
+    description: "Clientes reais que implementaram descobriram quanto estavam deixando de ganhar. Cobrança certa = lucro garantido.",
     gradient: "from-green-500 to-emerald-500",
     bgGradient: "from-green-500/10 to-emerald-500/10",
   },
   {
     icon: Clock,
     stat: "-60%",
-    label: "Tempo de gestão",
-    description: "Reduza o tempo gasto com tarefas administrativas e foque no que importa",
+    label: "Menos trabalho chato",
+    description: "Nada de ficar horas procurando pedidos ou calculando preço na mão. Tudo automatizado. Você produz, o sistema cuida.",
     gradient: "from-blue-500 to-cyan-500",
     bgGradient: "from-blue-500/10 to-cyan-500/10",
   },
   {
     icon: Target,
-    stat: "100%",
-    label: "Controle de pedidos",
-    description: "Nunca mais perca um pedido ou esqueça um prazo de entrega",
+    stat: "0 perdas",
+    label: "Nunca mais perca um pedido",
+    description: "Todo pedido, prazo e detalhe organizado. Sem WhatsApp desorganizado, sem atrasos que custem a reputação.",
     gradient: "from-purple-500 to-pink-500",
     bgGradient: "from-purple-500/10 to-pink-500/10",
   },
   {
     icon: Award,
-    stat: "5 estrelas",
-    label: "Satisfação dos clientes",
-    description: "Atendimento profissional que impressiona e fideliza clientes",
+    stat: "Profissional",
+    label: "Clientes levam você a sério",
+    description: "Orçamentos bonitos, prazos respeitados, atendimento impecável. Seus clientes vão acreditar que você é profissional (porque você vai ser).",
     gradient: "from-orange-500 to-red-500",
     bgGradient: "from-orange-500/10 to-red-500/10",
   },
   {
     icon: BarChart,
-    stat: "Dados reais",
-    label: "Decisões inteligentes",
-    description: "Relatórios completos para tomar decisões baseadas em dados",
+    stat: "Poder",
+    label: "Números na mão",
+    description: "Saiba exatamente quanto está faturando, quanto está gastando e quanto está lucrando. Não é achismo. É dado real.",
     gradient: "from-indigo-500 to-purple-500",
     bgGradient: "from-indigo-500/10 to-purple-500/10",
   },
   {
     icon: Rocket,
-    stat: "Crescimento",
-    label: "Escalável",
-    description: "Sistema que cresce junto com seu negócio, sem limites",
+    stat: "Infinito",
+    label: "Crescimento sem limite",
+    description: "Seu ateliê pode crescer que o sistema acompanha. Sem travamentos, sem limitações. Quanto maior, melhor.",
     gradient: "from-pink-500 to-rose-500",
     bgGradient: "from-pink-500/10 to-rose-500/10",
   },
@@ -67,13 +67,16 @@ export function BenefitsSection() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4 border-primary/20 bg-primary/5">
-              Benefícios
+              {/* prova social + urgência */}
+              Resultados que Comprovam
             </Badge>
             <h2 className="text-3xl font-bold tracking-tight text-balance text-foreground md:text-4xl lg:text-5xl mb-4 font-serif">
-              Resultados Reais para Seu Negócio
+              {/* transformação emocional: antes vs depois */}
+              Isso é Possível Para Você Também
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-              Veja o impacto que o Ateliê Pro pode ter no seu ateliê
+              {/* foco em transformação pessoal, não em features */}
+              500+ ateliês já conquistaram o que você está procurando. Hora de ser a próxima história de sucesso.
             </p>
           </div>
 

@@ -27,14 +27,16 @@ export function CTASection() {
             className="text-3xl font-bold tracking-tight text-balance md:text-5xl lg:text-6xl mb-6 drop-shadow-lg bg-gradient-to-r from-white via-purple-100 to-pink-100 bg-clip-text text-transparent animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
-            Teste o ERP criativo referência em gestão de ateliês
+            {/* transformação e promessa clara */}
+            Comece Agora. Veja a Diferença em 7 Dias.
           </h2>
 
           <p
             className="text-lg md:text-xl text-purple-100 mb-10 max-w-2xl mx-auto text-pretty leading-relaxed drop-shadow animate-fade-in"
             style={{ animationDelay: "0.4s" }}
           >
-            Junte-se a mais de 500 ateliês e confecções que já otimizaram seus fluxos de produção, aumentaram vendas em média 40% e reduziram tempo administrativo em 60% com o Ateliê Pro.
+            {/* prova social + resultado específico */}
+            Mais de 500 ateliês já descobriram quanto estavam deixando de ganhar. Aumentaram vendas em média 40%, economizaram horas de trabalho manual, e tudo ficou organizado. Você pode ser a próxima. Teste 100% grátis por 7 dias.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in" style={{ animationDelay: "0.6s" }}>
@@ -50,7 +52,8 @@ export function CTASection() {
                 data-analytics="cta-final-primary"
                 aria-label="Começar teste grátis agora"
               >
-                Começar Agora - É Grátis
+                {/* CTA padronizado com urgência */}
+                Testar Grátis Agora
                 <ArrowRight className="h-6 w-6 group-hover:translate-x-2 transition-transform duration-300" />
               </Link>
             </Button>
@@ -59,15 +62,15 @@ export function CTASection() {
           <div className="flex flex-wrap justify-center gap-6 text-sm text-purple-200 mb-8 animate-fade-in" style={{ animationDelay: "0.8s" }}>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
               <CheckCircle2 className="h-5 w-5 text-green-400" />
-              <span className="font-medium">Sem cartão de crédito</span>
+              <span className="font-medium">Nenhum cartão necessário</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
               <CheckCircle2 className="h-5 w-5 text-green-400" />
-              <span className="font-medium">Sem compromisso</span>
+              <span className="font-medium">Sem fidelidade</span>
             </div>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
               <CheckCircle2 className="h-5 w-5 text-green-400" />
-              <span className="font-medium">Resultados em 7 dias</span>
+              <span className="font-medium">Resultado garantido</span>
             </div>
           </div>
 

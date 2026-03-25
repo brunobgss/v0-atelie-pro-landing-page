@@ -14,11 +14,14 @@ export function AgendaFeatureSection() {
                 <span className="font-semibold text-sm">Gestão de Prazos Inteligente</span>
               </div>
 
-              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">Nunca Mais Atrase uma Entrega</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
+                {/* linguagem de solução de dor */}
+                Mais Nunca Você Erra um Prazo (Ou Perde Dinheiro Por Isso)
+              </h2>
 
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">
-                A Agenda de Entregas do Ateliê Pro organiza automaticamente todos os seus pedidos por prazo, envia
-                lembretes inteligentes e mantém você sempre no controle da produção.
+                {/* foco em transformação emocional e resultado */}
+                A Agenda automática do Ateliê Pro não deixa nada passar. Organiza tudo, avisa antes de você esquecer, e você nunca mais perde cliente por atraso.
               </p>
 
               {/* Benefits */}

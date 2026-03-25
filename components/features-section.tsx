@@ -17,136 +17,137 @@ import {
 const features = [
   {
     icon: Calculator,
-    title: "Calculadora de Precificação Profissional",
+    title: "Método de Precificação Inteligente Ateliê Pro™",
     description:
-      "Calcule preços com precisão usando dois métodos: por pontos (bordado) ou por horas trabalhadas. Inclui materiais, margem de lucro e análise de rentabilidade em tempo real.",
+      "Para de chutar preço na mão. Descubra exatamente quanto cobrar para ganhar dinheiro de verdade. Dois métodos: por pontos (bordado) ou horas trabalhadas. Veja o lucro real de cada pedido.",
     screenshot: "/calculator-screenshot.png",
     priority: "high",
     bullets: [
-      "Modo por pontos e por horas",
-      "Cálculo automático de materiais",
-      "Margem de lucro configurável (30-50%)",
-      "Templates pré-configurados",
-      "Análise de rentabilidade instantânea",
+      "Por pontos ou por horas (você escolhe)",
+      "Inclui material, tempo e lucro",
+      "Margem de lucro que você controla (30-50%)",
+      "Preço pronto para enviar ao cliente",
+      "Veja se vale a pena antes de aceitar",
     ],
   },
   {
     icon: MessageSquare,
-    title: "Integração WhatsApp Business",
+    title: "Orçamentos Profissionais no WhatsApp",
     description:
-      "Envie orçamentos profissionais direto pelo WhatsApp com templates formatados. Lembretes automáticos de entrega e comunicação integrada com clientes.",
+      "Envie aquele orçamento bonito que o cliente leva a sério. Em um clique, sem copiar e colar. E acompanha automáticamente quem respondeu e quem ignorou.",
     screenshot: "/catalog-screenshot.png",
     priority: "high",
     bullets: [
-      "Envio automático de orçamentos",
-      "Templates profissionais pré-formatados",
-      "Lembretes de entrega automáticos",
-      "Notificações de status em tempo real",
+      "Orçamento bonito, pronto para enviar",
+      "Faz tudo em um clique",
+      "Lembra automaticamente quem não respondeu",
+      "Rastreia aceito, recusado ou perdido",
+      "Sem trabalho manual extra",
     ],
   },
   {
     icon: ClipboardList,
-    title: "Gestão Completa de Pedidos",
+    title: "Sistema Anti-Atraso™ de Pedidos",
     description:
-      "Controle total sobre seus pedidos com status automático, duplicação inteligente e geração de ordens de produção profissionais.",
+      "Não é mais aquele caos de pedidos espalhados no WhatsApp. Todo pedido organizado, prazos claros, ninguém fica para trás. E você ainda recebe avisos antes de atrasar.",
     screenshot: "/dashboard-screenshot.png",
     priority: "medium",
     bullets: [
-      "Timeline visual de pedidos",
-      "Status automático (Aguardando, Em produção, Pronto)",
-      "Duplicação de pedidos recorrentes",
-      "Impressão de ordem de produção",
-      "Histórico completo de clientes",
+      "Tudo em um único lugar (sem cacos)",
+      "Status claro: espera → produção → pronto",
+      "Copia pedidos que repetem (economia de tempo)",
+      "Imprime ordem de produção profissional",
+      "Cliente sabe sempre onde está o pedido",
     ],
   },
   {
     icon: Calendar,
-    title: "Agenda com Avisos em Tempo Real",
+    title: "Agenda Inteligente que Te Protege",
     description:
-      "Calendário inteligente de entregas com notificações automáticas de pedidos atrasados e lembretes de urgência.",
+      "Calendário que faz você nunca mais atrasar. Avisa com antecedência, mostra no WhatsApp, e você recebe lembretes antes do caos.",
     screenshot: "/agenda-screenshot.png",
     priority: "medium",
     bullets: [
-      "Calendário de entregas automático",
-      "Alertas de pedidos atrasados",
-      "Lembretes 2 dias antes da entrega",
-      "Notificações via WhatsApp",
-      "Visão mensal e semanal",
+      "Calendário visual de tudo que sai",
+      "Alerta de atraso 2 dias antes",
+      "Aviso urgente se algo está atrasando",
+      "Notificação no WhatsApp (não perde)",
+      "Visão semana ou mês, como quiser",
     ],
   },
   {
     icon: Package,
-    title: "Controle de Estoque Inteligente",
+    title: "Controle de Estoque que Previne Desastre",
     description:
       "Gestão automática de estoque com alertas visuais quando materiais estão acabando. Nunca mais perca vendas por falta de insumos.",
     priority: "medium",
     bullets: [
-      "Controle de estoque mínimo",
-      "Alertas de reposição urgente",
-      "Status: Crítico, Baixo, Normal",
-      "Gestão de materiais e insumos",
+      "Avisa quando está acabando",
+      "Você define o mínimo que quer ter",
+      "Status claro: Crítico, Baixo, OK",
+      "Histórico de uso de materiais",
     ],
   },
   {
     icon: BookOpen,
-    title: "Catálogo de Produtos",
+    title: "Catálogo de Produtos Pronto",
     description:
-      "Biblioteca de produtos salvos com preços pré-configurados e templates reutilizáveis para agilizar orçamentos.",
+      "Salva seus produtos uma vez, reutiliza para sempre. Preços já vêm certos, economiza digitação. Seu trabalho mais rápido.",
     priority: "low",
     bullets: [
-      "Templates de produtos prontos",
-      "Preços pré-configurados",
-      "Histórico de vendas por produto",
-      "Galeria de trabalhos realizados",
+      "Salva cada modelo e preço",
+      "Reutiliza quantas vezes quiser",
+      "Vê todos os trabalhos que fez",
+      "Fotos dos seus projetos",
     ],
   },
   {
     icon: BarChart3,
-    title: "Relatórios Detalhados",
+    title: "Dashboard que Mostra Verdades",
     description:
-      "Análise completa do seu negócio com métricas de vendas, produtos mais lucrativos e performance financeira.",
+      "Pare de adivinhar. Você vê em um gráfico qual produto vende mais, qual lucra mais, qual cliente é melhor. Dados que te ajudam a crescer.",
     priority: "low",
     bullets: [
-      "Análise de vendas por período",
-      "Produtos mais vendidos",
-      "Clientes mais lucrativos",
-      "Métricas de crescimento",
+      "O que vendeu mais este mês",
+      "Qual produto lucra mesmo",
+      "Qual cliente é o mais importante",
+      "Crescimento semana a semana",
     ],
   },
   {
     icon: DollarSign,
-    title: "Controle Financeiro",
-    description: "Acompanhamento completo de pagamentos, saldos pendentes e análise de rentabilidade do seu ateliê.",
+    title: "Controle Financeiro Para Não Falir",
+    description: "Saiba exatamente quanto entrou, quanto saiu, e quanto você realmente lucrou. Chega de susto com custos escondidos.",
     screenshot: "/financial-screenshot.png",
     priority: "medium",
     bullets: [
-      "Controle de pagamentos parciais",
-      "Acompanhamento de saldos",
-      "Relatórios de receita",
-      "Análise de rentabilidade",
+      "Rastreia cada centavo que entra",
+      "Identifica quem ainda deve",
+      "Vê quanto você está lucrando",
+      "Prevê se vai faltar dinheiro",
     ],
   },
   {
     icon: Bell,
-    title: "Lembretes Automáticos",
+    title: "Lembretes que Salvam",
     description:
-      "Sistema inteligente de notificações que avisa sobre prazos, entregas e tarefas importantes automaticamente.",
+      "Automático avisa antes que você esqueça. Antes do prazo, antes de perder cliente, antes do caos. Você sempre lembrado.",
     priority: "low",
     bullets: [
-      "Notificações de prazo próximo",
-      "Alertas de pedidos urgentes",
-      "Lembretes de follow-up",
-      "Avisos de estoque baixo",
+      "Aviso quando está próximo o prazo",
+      "Alerta de pedidos urgentes",
+      "Lembra de acompanhar cliente",
+      "Aviso quando material está acabando",
     ],
   },
   {
     icon: FileText,
-    title: "Orçamentos Profissionais",
-    description: "Crie e envie orçamentos profissionais em PDF com aprovação que vira pedido automaticamente.",
+    title: "Orçamentos Profissionais e Impressionantes",
+    description: "Aquele orçamento que cliente olha e pensa: 'Esses são profissionais mesmo'. Bonito, claro, completo. Muda a percepção.",
     priority: "medium",
     bullets: [
-      "Geração de PDF profissional",
-      "Envio via WhatsApp",
+      "Orçamento em PDF profissional",
+      "Manda pelo WhatsApp",
       "Aprovação automática",
       "Controle de status (Pendente, Aprovado)",
     ],
@@ -160,18 +161,21 @@ export function FeaturesSection() {
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">
-              Funcionalidades
+              {/* foco em transformação e benefício */}
+              Suas Soluções
             </Badge>
             <h2 className="text-3xl font-bold tracking-tight text-balance text-foreground md:text-4xl lg:text-5xl mb-4 font-serif">
-              Tudo Que Você Precisa Para Crescer
+              {/* do problema para a solução */}
+              Não é Só um Sistema. É Tudo Que Faltava No Seu Ateliê.
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-              10 funcionalidades poderosas para transformar seu ateliê em um negócio profissional e lucrativo
+              {/* linguagem simples e direta sobre benefício */}
+              10 ferramentas que trabalham juntas para você organizar, cobrar certo e crescer. Cada uma resolve um problema real que você enfrenta hoje.
             </p>
           </div>
 
           <div className="mb-16">
-            <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Destaques Principais</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">Os Dois Que Mudam Tudo</h3>
             <div className="grid lg:grid-cols-2 gap-8">
               {features
                 .filter((f) => f.priority === "high")
@@ -226,7 +230,7 @@ export function FeaturesSection() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Funcionalidades Completas</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Mais 8 Ferramentas Essenciais</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features
                 .filter((f) => f.priority !== "high")

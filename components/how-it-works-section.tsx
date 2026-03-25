@@ -3,18 +3,18 @@ import { ArrowRight } from "lucide-react"
 const steps = [
   {
     number: "1",
-    title: "Crie o orçamento",
-    description: "Use a calculadora de precificação ou escolha um modelo pronto do catálogo",
+    title: "Crie o Orçamento Certo",
+    description: "Use a calculadora: ela mostra exatamente quanto você deve cobrar para ganhar dinheiro. Ou escolha um modelo salvo e seja rápido.",
   },
   {
     number: "2",
-    title: "Envie via WhatsApp",
-    description: "Receba aprovação do cliente e transforme automaticamente em pedido",
+    title: "Envie pelo WhatsApp (profissional)",
+    description: "Um clique e o orçamento bonito vai no WhatsApp do cliente. Sem copiar e colar. Sem parecer amador. Resultado: cliente aprova mais rápido.",
   },
   {
     number: "3",
-    title: "Produza e entregue",
-    description: "Acompanhe com checklist, receba pagamento e finalize com profissionalismo",
+    title: "Produza Organizado, Entregue na Hora",
+    description: "O pedido já está lá, com checklist de produção, prazo claro. Você não perde nada. Cliente recebe no prazo. Você cobra. E fica lindo.",
   },
 ]
 

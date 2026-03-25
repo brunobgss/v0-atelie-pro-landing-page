@@ -242,15 +242,25 @@ export function PricingSection() {
 
       <div className="container relative px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
+          {/* ancoragem de preço estratégica */}
+          <div className="mb-12 p-6 rounded-2xl bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-200/50 shadow-lg">
+            <p className="text-center text-red-900 font-semibold text-lg">
+              ⚠️ <strong>Um único pedido cobrado errado pode te fazer perder mais do que a mensalidade do sistema por MESES.</strong> Você está deixando dinheiro na mesa agora mesmo sem perceber.
+            </p>
+          </div>
+
           <div className="text-center mb-16 animate-fade-in">
             <Badge variant="outline" className="mb-4 bg-gradient-to-r from-purple-500/10 to-pink-500/10 border-purple-300/50 text-purple-700">
-              Preços
+              {/* foco em valor e escolha */}
+              Sem Surpresas • Escolha Seu Ritmo
             </Badge>
             <h2 className="text-3xl font-bold tracking-tight text-balance text-slate-900 md:text-4xl lg:text-5xl mb-4 font-serif bg-gradient-to-r from-slate-900 via-purple-900 to-slate-900 bg-clip-text text-transparent">
-              Planos pensados para ateliês e confecções de qualquer porte
+              {/* foco em transformação */}
+              Planos Que Cabem No Seu Bolso. E No Seu Crescimento.
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto text-pretty leading-relaxed">
-              Escolha a melhor forma de contratação para o momento do seu negócio. Alterne entre faturamento mensal ou anual a qualque momento.
+              {/* linguagem simples e confiança */}
+              Comece grátis, cresça do seu jeito. Sem fidelidade, sem multa. Você quer sair? Saí. Você quer ficar? Agora está ganhando mais dinheiro.
             </p>
           </div>
 
@@ -378,10 +388,12 @@ export function PricingSection() {
 
           <div className="mt-12 space-y-4 text-center animate-fade-in" style={{ animationDelay: "0.45s" }}>
             <p className="inline-flex items-center justify-center gap-2 rounded-full border border-emerald-200/60 bg-white/80 px-6 py-3 text-sm font-medium text-slate-600 backdrop-blur">
-              ✅ 7 dias de teste grátis • 🔐 Pagamento 100% seguro • 💬 Suporte dedicado para novas contas
+              {/* prova social + urgência + redução de objeções */}
+              ✅ 7 dias de teste grátis • 🔐 Sem cartão de crédito • 💬 Suporte real de verdade
             </p>
             <p className="text-xs text-slate-500">
-              Aceitamos Pix, cartão de crédito e boleto recorrente. Você pode migrar de mensal para anual (e vice-versa) a qualquer momento. Sem multas, sem fidelidade.
+              {/* foco em confiança e facilidade */}
+              Aceitamos Pix, cartão de crédito e boleto. Sem fidelidade, sem multa, sem surpresa. Você sai quando quiser. Mas a maioria fica porque está ganhando muito mais.
             </p>
           </div>
         </div>
