@@ -1,12 +1,12 @@
 import { AlertCircle, ArrowRight } from "lucide-react"
 
 const problems = [
-  "💰 Não sabe quanto cobrar (e deixa dinheiro na mesa)",
-  "📱 Pedidos espalhados no WhatsApp (e alguns desaparecem)",
-  "⏰ Atrasos na produção (e clientes chateados)",
-  "❌ Retrabalhos por falta de especificação clara",
-  "📦 Estoque e materiais totalmente desorganizados",
-  "😰 Parece amadora (clientes não levam a sério)",
+  "💰 Você pode estar trabalhando MUITO e ganhando POUCO",
+  "🤐 Cada pedido cobrado no 'achismo' é prejuízo que você não vê",
+  "📱 Um pedido perdido no WhatsApp = dinheiro que sumiu",
+  "⏰ Atraso = cliente chateado = reputação manchada",
+  "❌ Sem organização = retrabalho = horas perdidas",
+  "� Seus clientes acham que você é amadora (mesmo sendo boa)",
 ]
 
 export function ProblemsSection() {

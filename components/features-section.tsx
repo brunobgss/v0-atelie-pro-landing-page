@@ -19,30 +19,30 @@ const features = [
     icon: Calculator,
     title: "Método de Precificação Inteligente Ateliê Pro™",
     description:
-      "Para de chutar preço na mão. Descubra exatamente quanto cobrar para ganhar dinheiro de verdade. Dois métodos: por pontos (bordado) ou horas trabalhadas. Veja o lucro real de cada pedido.",
+      "Descubra exatamente quanto cobrar para NUNCA mais trabalhar com prejuízo. Com o sistema inteligente, você leva em conta tempo, material e margem real — evitando perder dinheiro em cada peça.",
     screenshot: "/calculator-screenshot.png",
     priority: "high",
     bullets: [
-      "Por pontos ou por horas (você escolhe)",
-      "Inclui material, tempo e lucro",
+      "Calcula tempo + material + lucro real",
+      "Dois métodos: por pontos ou horas trabalhadas",
+      "Vê se o pedido vale a pena ANTES de aceitar",
       "Margem de lucro que você controla (30-50%)",
-      "Preço pronto para enviar ao cliente",
-      "Veja se vale a pena antes de aceitar",
+      "Resultado: +40% de ganho por pedido em média",
     ],
   },
   {
     icon: MessageSquare,
     title: "Orçamentos Profissionais no WhatsApp",
     description:
-      "Envie aquele orçamento bonito que o cliente leva a sério. Em um clique, sem copiar e colar. E acompanha automáticamente quem respondeu e quem ignorou.",
+      "Cliente vê seu orçamento bonito, profissional e confiável — não aquele textão bagunçado. Resultado: aprova 3x mais rápido e não nega sem motivo.",
     screenshot: "/catalog-screenshot.png",
     priority: "high",
     bullets: [
-      "Orçamento bonito, pronto para enviar",
-      "Faz tudo em um clique",
-      "Lembra automaticamente quem não respondeu",
-      "Rastreia aceito, recusado ou perdido",
-      "Sem trabalho manual extra",
+      "Orçamento profissional que impressiona",
+      "Manda em um clique, sem copiar/colar",
+      "Rastreia quem viu, acenou, recusou",
+      "Lembra automaticamente de quem não respondeu",
+      "Transforma interessado em cliente",
     ],
   },
   {
@@ -172,6 +172,12 @@ export function FeaturesSection() {
               {/* linguagem simples e direta sobre benefício */}
               10 ferramentas que trabalham juntas para você organizar, cobrar certo e crescer. Cada uma resolve um problema real que você enfrenta hoje.
             </p>
+
+            <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300">
+              <p className="text-center text-purple-900 font-semibold text-lg">
+                💡 <strong>Não é só um sistema. É o que transforma seu ateliê em um negócio profissional.</strong>
+              </p>
+            </div>
           </div>
 
           <div className="mb-16">

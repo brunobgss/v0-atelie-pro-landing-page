@@ -67,16 +67,13 @@ export function BenefitsSection() {
         <div className="mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4 border-primary/20 bg-primary/5">
-              {/* prova social + urgência */}
               Resultados que Comprovam
             </Badge>
             <h2 className="text-3xl font-bold tracking-tight text-balance text-foreground md:text-4xl lg:text-5xl mb-4 font-serif">
-              {/* transformação emocional: antes vs depois */}
-              Isso é Possível Para Você Também
+              Ateliês Reais. Resultados Reais. Sem Promessa Vazia.
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-              {/* foco em transformação pessoal, não em features */}
-              500+ ateliês já conquistaram o que você está procurando. Hora de ser a próxima história de sucesso.
+              500+ ateliês já descobriram quanto estavam deixando de ganhar. Aumentaram vendas em até 40%, economizaram horas de trabalho, e tudo ficou organizado. Você pode ser a próxima.
             </p>
           </div>
 

@@ -242,10 +242,13 @@ export function PricingSection() {
 
       <div className="container relative px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
-          {/* ancoragem de preço estratégica */}
-          <div className="mb-12 p-6 rounded-2xl bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-200/50 shadow-lg">
-            <p className="text-center text-red-900 font-semibold text-lg">
-              ⚠️ <strong>Um único pedido cobrado errado pode te fazer perder mais do que a mensalidade do sistema por MESES.</strong> Você está deixando dinheiro na mesa agora mesmo sem perceber.
+          {/* ancoragem de preço estratégica - REFORÇADA */}
+          <div className="mb-12 p-8 rounded-2xl bg-gradient-to-r from-red-50 to-orange-50 border-2 border-red-200/50 shadow-lg">
+            <p className="text-center text-red-900 font-semibold text-lg mb-3">
+              ⚠️ <strong>Um único pedido cobrado errado = meses inteiros de mensalidade perdida</strong>
+            </p>
+            <p className="text-center text-red-800 text-sm">
+              Se você cobra no achismo, está deixando 15-30% do seu lucro ir embora. Silenciosamente. Agora mesmo.
             </p>
           </div>
 
