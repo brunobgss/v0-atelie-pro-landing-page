@@ -6,6 +6,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { Badge } from "@/components/ui/badge"
 import { Check, X } from "lucide-react"
 import Link from "next/link"
+import { useUrgencyCountdown } from "@/hooks/useUrgencyCountdown"
 
 type BillingCycle = "monthly" | "annual"
 
@@ -231,6 +232,8 @@ const plans: Plan[] = [
 
 export function PricingSection() {
   const [billingCycle, setBillingCycle] = useState<BillingCycle>("monthly")
+  // ATELIEPRO_CHANGE: Melhoria 2 - Adicionar hook de urgência
+  const countdown = useUrgencyCountdown()
 
   return (
     <section id="precos" className="py-20 md:py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 relative overflow-hidden">
@@ -287,6 +290,63 @@ export function PricingSection() {
               )
             })}
           </div>
+
+          {/* ATELIEPRO_CHANGE: Melhoria 2 - Banner de urgência com contador para plano anual */}
+          {billingCycle === "annual" && !countdown.isExpired && (
+            <div className="mb-12 rounded-lg bg-gradient-to-r from-amber-50 to-yellow-50 border-2 border-amber-300/60 p-8 text-center shadow-md animate-pulse-subtle">
+              <p className="text-lg font-semibold text-amber-900 mb-4">
+                🔥 Oferta por tempo limitado — Plano Anual com desconto especial
+              </p>
+              <p className="text-sm text-amber-800 mb-4">Essa condição expira em:</p>
+              <div className="flex gap-3 justify-center items-center mb-6">
+                <div className="flex flex-col items-center gap-1">
+                  <div className="bg-white border-2 border-amber-300 rounded px-3 py-2 min-w-12 font-mono font-bold text-lg text-slate-900">
+                    {String(countdown.days).padStart(2, "0")}
+                  </div>
+                  <span className="text-xs font-medium text-amber-700">dias</span>
+                </div>
+                <span className="text-2xl font-bold text-amber-900">:</span>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="bg-white border-2 border-amber-300 rounded px-3 py-2 min-w-12 font-mono font-bold text-lg text-slate-900">
+                    {String(countdown.hours).padStart(2, "0")}
+                  </div>
+                  <span className="text-xs font-medium text-amber-700">horas</span>
+                </div>
+                <span className="text-2xl font-bold text-amber-900">:</span>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="bg-white border-2 border-amber-300 rounded px-3 py-2 min-w-12 font-mono font-bold text-lg text-slate-900">
+                    {String(countdown.minutes).padStart(2, "0")}
+                  </div>
+                  <span className="text-xs font-medium text-amber-700">minutos</span>
+                </div>
+                <span className="text-2xl font-bold text-amber-900">:</span>
+                <div className="flex flex-col items-center gap-1">
+                  <div className="bg-white border-2 border-amber-300 rounded px-3 py-2 min-w-12 font-mono font-bold text-lg text-slate-900">
+                    {String(countdown.seconds).padStart(2, "0")}
+                  </div>
+                  <span className="text-xs font-medium text-amber-700">segundos</span>
+                </div>
+              </div>
+              <p className="text-sm font-medium text-amber-900">Garanta agora antes que o preço volte ao normal.</p>
+            </div>
+          )}
+
+          {/* ATELIEPRO_CHANGE: Melhoria 2 - Mensagem de oferta encerrada */}
+          {billingCycle === "annual" && countdown.isExpired && (
+            <div className="mb-12 rounded-lg bg-gradient-to-r from-slate-100 to-slate-50 border-2 border-slate-300 p-8 text-center shadow-md">
+              <p className="text-lg font-semibold text-slate-900 mb-4">
+                ⏰ Oferta encerrada. Fale com nosso time para condições especiais
+              </p>
+              <Button
+                asChild
+                className="gap-2 bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:shadow-lg transition-all"
+              >
+                <Link href="https://wa.me/5561982321534" target="_blank" rel="noopener noreferrer">
+                  💬 Falar no WhatsApp
+                </Link>
+              </Button>
+            </div>
+          )}
 
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {plans.map((plan, index) => {
@@ -359,6 +419,34 @@ export function PricingSection() {
                         </li>
                       ))}
                     </ul>
+
+                    {/* ATELIEPRO_CHANGE: Melhoria 4 - Lugar B: Explicar funcionamento do trial */}
+                    {plan.type === "trial" && (
+                      <div className="mt-6 pt-6 border-t border-slate-200 space-y-3">
+                        <div className="flex items-start gap-2">
+                          <span className="text-lg leading-none mt-0.5">ℹ️</span>
+                          <span className="text-xs font-semibold text-slate-700">Como funciona o trial:</span>
+                        </div>
+                        <ul className="space-y-2 text-xs text-slate-600">
+                          <li className="flex gap-2">
+                            <span className="font-semibold text-slate-700 flex-shrink-0">•</span>
+                            <span><strong>Dia 1–7:</strong> acesso completo, sem cartão cadastrado</span>
+                          </li>
+                          <li className="flex gap-2">
+                            <span className="font-semibold text-slate-700 flex-shrink-0">•</span>
+                            <span><strong>Dia 6:</strong> você recebe um e-mail perguntando se quer continuar</span>
+                          </li>
+                          <li className="flex gap-2">
+                            <span className="font-semibold text-slate-700 flex-shrink-0">•</span>
+                            <span><strong>Dia 7:</strong> se não escolher um plano, o acesso pausa — sem cobranças</span>
+                          </li>
+                          <li className="flex gap-2">
+                            <span className="font-semibold text-slate-700 flex-shrink-0">•</span>
+                            <span><strong>Retomar:</strong> escolha um plano e continue de onde parou</span>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
                   </CardContent>
 
                   <CardFooter className="mt-auto flex flex-col gap-3">

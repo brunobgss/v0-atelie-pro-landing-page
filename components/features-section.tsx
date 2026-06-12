@@ -12,6 +12,8 @@ import {
   DollarSign,
   Bell,
   FileText,
+  ShoppingCart,
+  Receipt,
 } from "lucide-react"
 
 const features = [
@@ -152,6 +154,34 @@ const features = [
       "Controle de status (Pendente, Aprovado)",
     ],
   },
+  {
+    icon: ShoppingCart,
+    title: "PDV Completo - Vendas de Balcão",
+    description:
+      "Venda na hora com PDV integrado. Emita nota fiscal imediata das vendas, gerencie vendas com dashboard em tempo real e tenha controle total do seu balcão.",
+    priority: "medium",
+    bullets: [
+      "PDV completo para vendas de balcão",
+      "Emissão de nota fiscal imediata",
+      "Dashboard de vendas em tempo real",
+      "Rastreamento de cada venda",
+      "Integração com estoque automática",
+    ],
+  },
+  {
+    icon: Receipt,
+    title: "Cupom Fiscal Integrado",
+    description:
+      "Gere e imprima cupons fiscais profissionais na hora da venda. Cliente leva o comprovante, você tem registro completo e automático no sistema.",
+    priority: "medium",
+    bullets: [
+      "Gera cupom fiscal automaticamente",
+      "Imprime na hora da venda",
+      "Formatação profissional pronta",
+      "Integrado ao sistema de vendas",
+      "Registro permanente de cada cupom",
+    ],
+  },
 ]
 
 export function FeaturesSection() {
@@ -170,7 +200,7 @@ export function FeaturesSection() {
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
               {/* linguagem simples e direta sobre benefício */}
-              10 ferramentas que trabalham juntas para você organizar, cobrar certo e crescer. Cada uma resolve um problema real que você enfrenta hoje.
+              12 ferramentas que trabalham juntas para você organizar, cobrar certo e crescer. Cada uma resolve um problema real que você enfrenta hoje.
             </p>
 
             <div className="mt-8 p-6 rounded-2xl bg-gradient-to-r from-purple-100 to-pink-100 border-2 border-purple-300">
@@ -236,7 +266,7 @@ export function FeaturesSection() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Mais 8 Ferramentas Essenciais</h3>
+            <h3 className="text-2xl font-bold mb-8 text-center bg-gradient-to-r from-slate-700 to-slate-900 bg-clip-text text-transparent">Mais 10 Ferramentas Essenciais</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {features
                 .filter((f) => f.priority !== "high")

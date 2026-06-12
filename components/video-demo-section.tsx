@@ -1,20 +1,12 @@
 "use client"
 
-import { useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { Play, ShieldCheck, Sparkles } from "lucide-react"
+import { ShieldCheck, Sparkles } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 
-const DEMO_VIDEO_BASE_URL = "https://www.youtube.com/embed/iQvDdFipwWs"
-const DEMO_VIDEO_SHARE_URL = "https://youtu.be/iQvDdFipwWs?si=eY1Z8gJNuVLBPwN-"
-
 export function VideoDemoSection() {
-  const [isPlaying, setIsPlaying] = useState(false)
-
-  const videoUrl = `${DEMO_VIDEO_BASE_URL}?rel=0&enablejsapi=1&playsinline=1&modestbranding=1&autoplay=${isPlaying ? "1" : "0"}&mute=${isPlaying ? "0" : "1"}`
-  const posterImage = "/modern-atelier-management-dashboard-interface.jpg"
 
   return (
     <section id="demo-video" className="relative overflow-hidden bg-gradient-to-b from-white via-purple-50/40 to-white py-20">
@@ -92,50 +84,21 @@ export function VideoDemoSection() {
           </div>
 
           <div className="relative">
-            <div className="relative overflow-hidden rounded-3xl border border-purple-200/60 bg-slate-950/90 shadow-2xl">
-              {!isPlaying && (
-                <button
-                  type="button"
-                  onClick={() => setIsPlaying(true)}
-                  className="group relative block w-full focus-visible:outline-none"
-                  aria-label="Assistir à demonstração do Ateliê Pro"
-                >
-                  <div className="relative aspect-video">
-                    <Image
-                      src={posterImage}
-                      alt="Prévia do vídeo de demonstração do Ateliê Pro"
-                      fill
-                      className="object-cover"
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 640px"
-                      priority={false}
-                    />
-                    <div className="absolute inset-0 bg-slate-900/40" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="flex h-16 w-16 items-center justify-center rounded-full bg-white/90 text-purple-600 shadow-xl transition-transform duration-300 group-hover:scale-110">
-                        <Play className="h-7 w-7" aria-hidden="true" />
-                      </span>
-                    </div>
-                  </div>
-                </button>
-              )}
-
-              {isPlaying && (
-                <iframe
-                  className="aspect-video h-full w-full"
-                  src={videoUrl}
-                  title="Demonstração do Ateliê Pro"
-                  loading="lazy"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowFullScreen
-                  referrerPolicy="strict-origin-when-cross-origin"
-                />
-              )}
-            </div>
-
-            <div className="mt-4 rounded-2xl bg-white/80 p-4 shadow-lg shadow-purple-500/10 backdrop-blur">
-              <p className="text-sm text-slate-600">
-                Para navegadores que não suportam o player incorporado, <Link href={DEMO_VIDEO_SHARE_URL} className="font-semibold text-purple-600 hover:text-purple-700" target="_blank" rel="noopener noreferrer">abra a demonstração em uma nova aba</Link>.
-              </p>
+            {/* ATELIEPRO_CHANGE: Melhoria 5 - Imagem do dashboard na seção de demonstração */}
+            <div className="relative rounded-3xl border border-purple-400/30 bg-white/5 backdrop-blur-sm shadow-2xl shadow-purple-500/30 overflow-hidden hover:shadow-3xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-[1.02] group">
+              <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 group-hover:from-purple-500/20 group-hover:to-pink-500/20 transition-all duration-500" />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent" />
+              <Image
+                src="/dashboard-screenshot.png"
+                alt="Dashboard do Ateliê Pro - Visão geral do sistema de gestão"
+                width={1200}
+                height={675}
+                className="w-full h-auto object-cover relative z-10 group-hover:scale-105 transition-transform duration-700"
+                priority={false}
+                quality={90}
+              />
+              {/* Glow effect */}
+              <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500 -z-10" />
             </div>
           </div>
         </div>

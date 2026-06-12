@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Link from "next/link"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -247,15 +248,26 @@ export function CalculatorPreviewSection() {
                     </div>
                   </div>
 
-                  <div className="pt-4 space-y-2">
-                    <Button className="w-full gap-2 h-11 bg-primary hover:bg-primary/90">
-                      <FileText className="h-4 w-4" />
-                      Salvar Produto
-                    </Button>
-                    <Button variant="outline" className="w-full gap-2 h-11 bg-transparent">
-                      <MessageSquare className="h-4 w-4" />
-                      Gerar Orçamento
-                    </Button>
+                  {/* ATELIEPRO_CHANGE: Melhoria 1 - Substituir botões finais por CTA de conversão */}
+                  <div className="pt-6 space-y-4 border-t border-primary/20">
+                    <div className="rounded-lg bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/30 p-4 text-center">
+                      <p className="text-sm font-medium text-foreground mb-3 flex items-center justify-center gap-2">
+                        <span className="text-base">💡</span>
+                        Quer salvar esse cálculo e usar no seu ateliê de verdade?
+                      </p>
+                      <Button
+                        asChild
+                        size="lg"
+                        className="w-full h-12 bg-gradient-to-r from-primary via-primary to-secondary text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                      >
+                        <Link href="https://app.ateliepro.online" target="_blank" rel="noopener noreferrer">
+                          CRIAR MINHA CONTA GRÁTIS →
+                        </Link>
+                      </Button>
+                      <p className="text-xs text-muted-foreground mt-3">
+                        Grátis por 7 dias • Sem cartão • Cancele quando quiser
+                      </p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

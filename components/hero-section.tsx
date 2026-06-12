@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Play, CheckCircle2, Sparkles } from "lucide-react"
+import { CheckCircle2, Sparkles, Play } from "lucide-react"
 import Link from "next/link"
-import Image from "next/image"
+import { HeroVideoPlayer } from "@/components/hero-video-player"
 
 export function HeroSection() {
   return (
@@ -79,6 +79,11 @@ export function HeroSection() {
             </Button>
           </div>
 
+          {/* ATELIEPRO_CHANGE: Melhoria 4 - Texto de tranquilização pós-trial (Lugar A) */}
+          <p className="text-xs text-purple-200/80 text-center mb-16 animate-fade-in" style={{ animationDelay: "0.7s" }}>
+            🔒 No 6º dia você recebe um e-mail de aviso. Se não quiser continuar, cancele com 1 clique — sem pegadinhas, sem cobrança automática surpresa.
+          </p>
+
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-purple-200 mb-16 animate-fade-in" style={{ animationDelay: "0.6s" }}>
             <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
               <CheckCircle2 className="h-4 w-4 text-green-400" />
@@ -95,24 +100,9 @@ export function HeroSection() {
           </div>
         </div>
 
+        {/* ATELIEPRO_CHANGE: Melhoria 5 - Player de vídeo na hero section */}
         <div className="mx-auto mt-8 max-w-6xl animate-fade-in" style={{ animationDelay: "0.8s" }}>
-          <div className="relative rounded-3xl border border-purple-400/30 bg-white/5 backdrop-blur-sm shadow-2xl shadow-purple-500/30 overflow-hidden hover:shadow-3xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-[1.02] group">
-            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-pink-500/10 group-hover:from-purple-500/20 group-hover:to-pink-500/20 transition-all duration-500" />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent" />
-            <Image
-              src="/dashboard-screenshot.png"
-              alt="Ateliê Pro Dashboard - Interface de gestão moderna"
-              width={1200}
-              height={675}
-              className="w-full h-auto object-cover relative z-10 group-hover:scale-105 transition-transform duration-700"
-              priority
-              quality={90}
-              placeholder="blur"
-              blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxUf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
-            />
-            {/* Glow effect */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-3xl blur opacity-30 group-hover:opacity-50 transition-opacity duration-500 -z-10" />
-          </div>
+          <HeroVideoPlayer />
         </div>
       </div>
     </section>
