@@ -227,3 +227,15 @@ Require stack:
  ✓ Compiled in 732ms (1075 modules)
  ✓ Compiled in 614ms (1075 modules)
  ✓ Compiled in 609ms (1075 modules)
+Image with src "/demo-profissional-ateliepro-h-folha.jpg" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/dashboard-screenshot.png" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/calculator-screenshot.png" is using quality "85" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/catalog-screenshot.png" is using quality "85" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ ✓ Compiled /_not-found in 459ms (1066 modules)
+ GET /demo-profissional-ateliepro-h-folha.jpg 404 in 712ms
+ GET / 200 in 1997ms
+ ✓ Compiled in 1164ms (1075 modules)
