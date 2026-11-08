@@ -31,12 +31,7 @@ export default function LandingPage() {
         <InvoiceModuleSection />
         <WhatsAppFeatureSection />
         <AgendaFeatureSection />
-        <AppDemoSection />
-        <UseCasesSection />
-        <HowItWorksSection />
-        <CalculatorPreviewSection />
         <BenefitsSection />
-        <ComparisonSection />
         <TestimonialsSection />
         <PricingSection />
         <FAQSection />
