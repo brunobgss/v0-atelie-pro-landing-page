@@ -52,6 +52,7 @@ const plans: Plan[] = [
     description: "Para ateliês iniciantes que estão profissionalizando a gestão",
     type: "basic",
     nfLimit: 0,
+    recommended: true,
     features: [
       { text: "Gestão completa de pedidos", included: true },
       { text: "Calculadora de preços profissional", included: true },
@@ -71,6 +72,7 @@ const plans: Plan[] = [
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-basico-mensal",
         analyticsId: "pricing-basico-mensal",
         guarantee: "7 dias grátis para testar",
+        badge: { label: "⭐ Mais popular", tone: "highlight" },
       },
       quarterly: {
         price: "R$ 79,90",
@@ -140,10 +142,9 @@ const plans: Plan[] = [
   {
     id: "professional-monthly",
     name: "Profissional Mensal",
-    description: "Com emissor de notas fiscais integrado. O mais popular.",
+    description: "Com emissor de notas fiscais integrado.",
     type: "professional",
     nfLimit: 100,
-    recommended: true,
     features: [
       { text: "Tudo do Plano Básico", included: true },
       { text: "Emissão de notas fiscais (até 100/mês)", included: true },
@@ -162,7 +163,6 @@ const plans: Plan[] = [
         ctaLabel: "Escolher plano",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-mensal",
         analyticsId: "pricing-prof-mensal",
-        badge: { label: "⭐ Mais popular", tone: "highlight" },
       },
       quarterly: {
         price: "R$ 280,00",
