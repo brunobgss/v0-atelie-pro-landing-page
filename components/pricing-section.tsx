@@ -447,7 +447,7 @@ export function PricingSection() {
                       >
                   {billing.badge && (
                     <Badge
-                      className={`absolute top-12 left-1/2 -translate-x-1/2 shadow-lg ${
+                      className={`absolute top-11 left-1/2 -translate-x-1/2 shadow-lg px-4 py-1.5 text-sm font-semibold ${
                         billing.badge.tone === "highlight"
                           ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white"
                           : billing.badge.tone === "outline"
@@ -459,7 +459,7 @@ export function PricingSection() {
                     </Badge>
                   )}
 
-                  <CardHeader className="space-y-4 text-center pb-8">
+                  <CardHeader className="space-y-4 text-center pt-8 pb-8">
                     <CardTitle className="text-2xl font-semibold text-slate-900 min-h-24 flex items-center justify-center">
                       {plan.name}
                     </CardTitle>
