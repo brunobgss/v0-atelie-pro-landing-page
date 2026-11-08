@@ -447,7 +447,7 @@ export function PricingSection() {
                       >
                   {billing.badge && (
                     <Badge
-                      className={`absolute -top-3 left-1/2 -translate-x-1/2 shadow-lg ${
+                      className={`absolute top-12 left-1/2 -translate-x-1/2 shadow-lg ${
                         billing.badge.tone === "highlight"
                           ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white"
                           : billing.badge.tone === "outline"
