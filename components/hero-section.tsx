@@ -41,7 +41,7 @@ export function HeroSection() {
               className="text-base px-10 h-14 shadow-2xl shadow-pink-500/40 hover:shadow-3xl hover:shadow-pink-500/60 hover:scale-105 transition-all duration-300 bg-pink-600 hover:bg-pink-700 text-white font-semibold border-0"
             >
               <Link
-                href="https://app.ateliepro.online"
+                href="https://app.ateliepro.online?source=landing-hero-primary"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-analytics="cta-hero-primary"
@@ -55,7 +55,7 @@ export function HeroSection() {
               size="lg"
               variant="outline"
               asChild
-              className="text-base px-10 h-14 gap-3 bg-white/10 backdrop-blur-md hover:bg-white/20 hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 border-white/30 text-white hover:scale-105"
+              className="text-base px-10 h-14 gap-3 bg-white/10 backdrop-blur-md hover:bg-white/20 hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 border-white/30 text-white"
             >
               <Link href="#demo-video" data-analytics="cta-hero-demo" aria-label="Ver demonstração em vídeo do Ateliê Pro">
                 <Play className="h-5 w-5" />

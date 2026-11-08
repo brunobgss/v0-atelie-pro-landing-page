@@ -56,21 +56,21 @@ export function Header() {
 
         <div className="flex items-center gap-3">
           <Button variant="ghost" size="sm" asChild className="text-slate-600 hover:text-purple-600 hover:bg-purple-50 transition-all duration-300">
-            <Link 
-              href="https://app.ateliepro.online" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+            <Link
+              href="https://app.ateliepro.online?source=landing-header-login"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Entrar no sistema Ateliê Pro"
               data-analytics="cta-header-login"
             >
               Entrar
             </Link>
           </Button>
-          <Button size="sm" asChild className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <Link 
-              href="https://app.ateliepro.online" 
-              target="_blank" 
-              rel="noopener noreferrer" 
+          <Button size="sm" asChild className="bg-pink-600 hover:bg-pink-700 text-white shadow-lg hover:shadow-xl transition-all duration-300">
+            <Link
+              href="https://app.ateliepro.online?source=landing-header-trial"
+              target="_blank"
+              rel="noopener noreferrer"
               aria-label="Começar teste grátis de 7 dias"
               data-analytics="cta-header-trial"
             >
