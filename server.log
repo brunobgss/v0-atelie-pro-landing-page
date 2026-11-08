@@ -239,3 +239,4 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
  GET /demo-profissional-ateliepro-h-folha.jpg 404 in 712ms
  GET / 200 in 1997ms
  ✓ Compiled in 1164ms (1075 modules)
+ ✓ Compiled in 711ms (1075 modules)

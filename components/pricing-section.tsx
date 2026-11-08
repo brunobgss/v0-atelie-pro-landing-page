@@ -460,7 +460,7 @@ export function PricingSection() {
                   )}
 
                   <CardHeader className="space-y-5 text-center pt-8 pb-8 border-b border-slate-200/50">
-                    <div className="space-y-2.5">
+                    <div className="space-y-2">
                       <CardTitle className="text-2xl font-semibold text-slate-900 min-h-20 flex items-center justify-center">
                         {plan.name}
                       </CardTitle>
