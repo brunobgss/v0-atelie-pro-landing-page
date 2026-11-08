@@ -1,0 +1,100 @@
+
+> atelie-pro-landing-page@1.0.0 dev
+> next dev
+
+ ⚠ Port 3000 is in use by process 7212, using available port 3002 instead.
+   ▲ Next.js 15.5.9
+   - Local:        http://localhost:3002
+   - Network:      http://192.168.0.191:3002
+
+ ✓ Starting...
+ ✓ Ready in 3.3s
+ ○ Compiling / ...
+ ✓ Compiled / in 2.6s (828 modules)
+Image with src "/demo-profissional-ateliepro-h-folha.jpg" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/dashboard-screenshot.png" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/calculator-screenshot.png" is using quality "85" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/catalog-screenshot.png" is using quality "85" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ ○ Compiling /_not-found ...
+ GET / 200 in 4924ms
+ ✓ Compiled /_not-found in 1511ms (833 modules)
+ GET /demo-profissional-ateliepro-h-folha.jpg 404 in 1800ms
+ GET / 200 in 999ms
+ GET / 200 in 391ms
+ GET / 200 in 314ms
+ ✓ Compiled in 958ms (833 modules)
+ GET / 200 in 443ms
+ ⨯ [Error: ENOENT: no such file or directory, open 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\server\app-paths-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\PROJETOS\\LP ATELIE PRO NOV 26\\v0-atelie-pro-landing-page\\.next\\server\\app-paths-manifest.json',
+  page: '/'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 784ms (1159 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\PROJETOS\\LP ATELIE PRO NOV 26\\v0-atelie-pro-landing-page\\.next\\routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\PROJETOS\\LP ATELIE PRO NOV 26\\v0-atelie-pro-landing-page\\.next\\routes-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\PROJETOS\\LP ATELIE PRO NOV 26\\v0-atelie-pro-landing-page\\.next\\routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\server\app-paths-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\PROJETOS\\LP ATELIE PRO NOV 26\\v0-atelie-pro-landing-page\\.next\\server\\app-paths-manifest.json',
+  page: '/'
+}
+[Error: ENOENT: no such file or directory, open 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\PROJETOS\\LP ATELIE PRO NOV 26\\v0-atelie-pro-landing-page\\.next\\routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\PROJETOS\\LP ATELIE PRO NOV 26\\v0-atelie-pro-landing-page\\.next\\routes-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\PROJETOS\\LP ATELIE PRO NOV 26\\v0-atelie-pro-landing-page\\.next\\routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\PROJETOS\\LP ATELIE PRO NOV 26\\v0-atelie-pro-landing-page\\.next\\routes-manifest.json'
+}
+ GET / 500 in 4555ms
+ GET / 500 in 743ms
+[Error: ENOENT: no such file or directory, open 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\routes-manifest.json'] {
+  errno: -4058,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'D:\\PROJETOS\\LP ATELIE PRO NOV 26\\v0-atelie-pro-landing-page\\.next\\routes-manifest.json'
+}
+ GET / 500 in 4083ms
+ GET / 500 in 460ms
