@@ -1,7 +1,11 @@
+"use client"
+
+import { useState } from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
-import { Star, TrendingUp, Quote } from "lucide-react"
+import { Star, TrendingUp, Quote, ChevronLeft, ChevronRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 const testimonials = [
   {
@@ -84,6 +88,16 @@ const testimonials = [
 ]
 
 export function TestimonialsSection() {
+  const [carouselIndex, setCarouselIndex] = useState(0)
+
+  const handlePrevious = () => {
+    setCarouselIndex((prev) => Math.max(0, prev - 1))
+  }
+
+  const handleNext = () => {
+    setCarouselIndex((prev) => Math.min(testimonials.length - 1, prev + 1))
+  }
+
   return (
     <section className="py-20 md:py-28 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0.6))] -z-10" />
@@ -103,7 +117,8 @@ export function TestimonialsSection() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          {/* Desktop Grid */}
+          <div className="hidden md:grid md:grid-cols-2 gap-6">
             {testimonials.map((testimonial, index) => (
               <Card
                 key={index}
@@ -148,6 +163,96 @@ export function TestimonialsSection() {
                 </CardContent>
               </Card>
             ))}
+          </div>
+
+          {/* Mobile Carousel */}
+          <div className="md:hidden">
+            <div className="overflow-hidden">
+              <div
+                className="flex transition-transform duration-500 ease-out"
+                style={{ transform: `translateX(-${carouselIndex * 100}%)` }}
+              >
+                {testimonials.map((testimonial, index) => (
+                  <div key={index} style={{ flex: '0 0 100%' }} className="px-0">
+                    <Card className="group border-border/50 hover:border-primary/30 transition-all duration-500 hover:shadow-2xl bg-gradient-to-br from-background to-muted/20 relative overflow-hidden">
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                      <CardContent className="pt-8 pb-8 px-8 relative">
+                        <Quote className="absolute top-6 right-6 h-16 w-16 text-primary/15 group-hover:text-primary/25 transition-colors" />
+
+                        <div className="flex items-start justify-between mb-8">
+                          <div className="flex gap-1.5">
+                            {Array.from({ length: testimonial.rating }).map((_, i) => (
+                              <Star key={i} className="h-6 w-6 fill-amber-400 text-amber-400 drop-shadow-md" />
+                            ))}
+                          </div>
+                          <Badge className="gap-2 px-5 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-base shadow-lg">
+                            <TrendingUp className="h-5 w-5" />
+                            {testimonial.metric.toUpperCase()}
+                          </Badge>
+                        </div>
+
+                        <p className="text-foreground mb-8 leading-relaxed text-lg italic">"{testimonial.quote}"</p>
+
+                        <div className="flex items-center gap-4 pt-6 border-t border-border/50">
+                          <div className="relative">
+                            <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-sm opacity-50" />
+                            <Avatar className="h-16 w-16 border-2 border-background relative">
+                              <AvatarImage src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.name} />
+                              <AvatarFallback className="bg-gradient-to-br from-primary to-secondary text-primary-foreground font-semibold">
+                                {testimonial.initials}
+                              </AvatarFallback>
+                            </Avatar>
+                          </div>
+                          <div>
+                            <div className="font-bold text-foreground text-lg">{testimonial.name}</div>
+                            <div className="text-sm text-muted-foreground font-medium">{testimonial.business} • {testimonial.location}</div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Navigation Controls */}
+            <div className="flex items-center justify-center gap-4 mt-8">
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={handlePrevious}
+                disabled={carouselIndex === 0}
+                className="rounded-full"
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+
+              <div className="flex gap-2">
+                {testimonials.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCarouselIndex(index)}
+                    className={`h-2 rounded-full transition-all ${
+                      index === carouselIndex
+                        ? "w-8 bg-primary"
+                        : "w-2 bg-primary/30 hover:bg-primary/50"
+                    }`}
+                    aria-label={`Go to testimonial ${index + 1}`}
+                  />
+                ))}
+              </div>
+
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={handleNext}
+                disabled={carouselIndex === testimonials.length - 1}
+                className="rounded-full"
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
           </div>
         </div>
       </div>
