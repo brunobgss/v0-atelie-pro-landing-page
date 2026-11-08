@@ -35,35 +35,32 @@ export function HeroSection() {
             <Sparkles className="w-4 h-4 mr-2 inline animate-pulse" />7 dias grátis • Sem cartão • Sem compromisso
           </Badge>
 
-          <h1 className="mb-6 text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:text-7xl font-serif bg-gradient-to-r from-white via-purple-100 to-pink-100 bg-clip-text text-transparent animate-fade-in">
-            {/* foco em transformação e resultado financeiro */}
-            Organize seu ateliê, cobre certo e aumente seu lucro em até 40% em poucos dias
+          <h1 className="mb-6 text-4xl font-bold tracking-tight text-balance text-white md:text-5xl lg:text-6xl font-sans animate-fade-in">
+            Precificação Inteligente + Gestão de Pedidos em Um Lugar
           </h1>
 
           <p
-            className="mb-10 text-lg text-pretty text-purple-100 md:text-xl lg:text-2xl max-w-3xl mx-auto leading-relaxed animate-fade-in"
+            className="mb-10 text-lg text-pretty text-purple-100 md:text-xl max-w-3xl mx-auto leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
-            {/* foco em benefício, prova social e redução de objeções */}
-            O sistema completo para costureiras, confecções e ateliês que querem se organizar, profissionalizar e crescer. Sem perder tempo com desorganização, sem cobrar errado, sem atrasar pedidos. Mais de 500 ateliês já conquistaram controle total do seu negócio e descobriram quanto estavam deixando de ganhar. Você vai ver a diferença na primeira semana.
+            Aumente lucro em até 40%, organize pedidos, envie orçamentos profissionais no WhatsApp. Teste grátis por 7 dias, sem cartão.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Button
               size="lg"
               asChild
-              className="text-base px-10 h-14 shadow-2xl shadow-purple-500/40 hover:shadow-3xl hover:shadow-purple-500/60 hover:scale-110 transition-all duration-300 bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 hover:from-purple-500 hover:via-purple-400 hover:to-pink-500 text-white font-semibold border-0"
+              className="text-base px-10 h-14 shadow-2xl shadow-pink-500/40 hover:shadow-3xl hover:shadow-pink-500/60 hover:scale-105 transition-all duration-300 bg-pink-600 hover:bg-pink-700 text-white font-semibold border-0"
             >
-              {/* CTA padronizado com foco em ação rápida */}
-              <Link 
-                href="https://app.ateliepro.online" 
-                target="_blank" 
+              <Link
+                href="https://app.ateliepro.online"
+                target="_blank"
                 rel="noopener noreferrer"
                 data-analytics="cta-hero-primary"
                 aria-label="Começar teste grátis de 7 dias do Ateliê Pro"
               >
                 <Sparkles className="w-5 h-5 mr-2" />
-                Testar Grátis Agora — 7 Dias
+                Testar 7 Dias Grátis
               </Link>
             </Button>
             <Button
