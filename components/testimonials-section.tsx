@@ -59,6 +59,28 @@ const testimonials = [
     rating: 5,
     metric: "+45% lucro líquido",
   },
+  {
+    name: "Beatriz Mendes",
+    business: "Confecções BM Ltda",
+    location: "Brasília, DF",
+    avatar: "/beatriz-mendes.png",
+    initials: "BM",
+    quote:
+      "Desde que comecei a usar o Ateliê Pro, minha comunicação com clientes melhorou 200%. O WhatsApp integrado economiza horas por dia. Meus clientes agora sabem exatamente quando fica pronto!",
+    rating: 5,
+    metric: "+60% satisfação cliente",
+  },
+  {
+    name: "Luciana Torres",
+    business: "Bordaria Luciana",
+    location: "Fortaleza, CE",
+    avatar: "/luciana-torres.png",
+    initials: "LT",
+    quote:
+      "Passei de 5 para 15 pedidos por semana em 2 meses. A organização que o sistema dá foi essencial. Hoje consigo gerenciar tudo sozinha e ainda sobra tempo. Melhor investimento da história!",
+    rating: 5,
+    metric: "+200% em volume",
+  },
 ]
 
 export function TestimonialsSection() {
