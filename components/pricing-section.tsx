@@ -459,8 +459,8 @@ export function PricingSection() {
                     </Badge>
                   )}
 
-                  <CardHeader className="space-y-3 text-center">
-                    <CardTitle className="text-2xl font-semibold text-slate-900">
+                  <CardHeader className="space-y-3 text-center pb-6">
+                    <CardTitle className="text-2xl font-semibold text-slate-900 min-h-16 flex items-center justify-center">
                       {plan.name}
                     </CardTitle>
                     <p className="text-sm text-slate-500">{plan.description}</p>

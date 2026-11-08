@@ -180,3 +180,41 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
  GET / 500 in 3116ms
  ✓ Compiled in 1055ms (1168 modules)
  ✓ Compiled in 987ms (1075 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\cache\webpack\server-development\0.pack.gz_' -> 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\cache\webpack\server-development\0.pack.gz'
+Image with src "/demo-profissional-ateliepro-h-folha.jpg" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/dashboard-screenshot.png" is using quality "90" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/calculator-screenshot.png" is using quality "85" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+Image with src "/catalog-screenshot.png" is using quality "85" which is not configured in images.qualities. This config will be required starting in Next.js 16.
+Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 513ms (1080 modules)
+ ⨯ Error: Cannot find module './617.js'
+Require stack:
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\server\webpack-runtime.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\server\app\_not-found\page.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\server\require.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\server\load-components.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\build\utils.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\build\swc\options.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\build\swc\index.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\build\analysis\parse-module.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\build\analysis\get-page-static-info.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\server\lib\router-utils\setup-dev-bundler.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\server\lib\router-server.js
+- D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\server\lib\start-server.js
+    at <unknown> (D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\server\app\_not-found\page.js:7:737)
+    at Object.<anonymous> (D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\server\app\_not-found\page.js:7:782) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [Array]
+}
+ ✓ Compiled /_error in 228ms (1159 modules)
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ ⨯ [TypeError: Cannot read properties of undefined (reading '/_app')]
+[TypeError: Cannot read properties of undefined (reading '/_app')]
+ GET / 200 in 2265ms
+ GET /demo-profissional-ateliepro-h-folha.jpg 500 in 1210ms
+ GET /demo-profissional-ateliepro-h-folha.jpg 500 in 365ms
+ ✓ Compiled in 1005ms (1075 modules)
