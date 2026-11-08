@@ -8,7 +8,7 @@ const testimonials = [
     name: "Maria Silva",
     business: "Ateliê Maria Bordados",
     location: "São Paulo, SP",
-    avatar: "/woman-business-owner.png",
+    avatar: "/maria-silva.png",
     initials: "MS",
     quote:
       "Consegui organizar meu ateliê e aumentar vendas em 35% no primeiro mês. O sistema é intuitivo e me economiza horas por dia. A calculadora de preços foi um divisor de águas!",
@@ -19,7 +19,7 @@ const testimonials = [
     name: "João Santos",
     business: "Confecção J&J Uniformes",
     location: "Rio de Janeiro, RJ",
-    avatar: "/man-business-owner.png",
+    avatar: "/joao-santos.png",
     initials: "JS",
     quote:
       "Finalmente tenho controle total dos meus pedidos e clientes. A calculadora de precificação me ajudou a precificar corretamente e aumentar minha margem de lucro.",
@@ -30,23 +30,12 @@ const testimonials = [
     name: "Ana Costa",
     business: "Bordados Ana Costa",
     location: "Belo Horizonte, MG",
-    avatar: "/woman-entrepreneur.png",
+    avatar: "/ana-costa.png",
     initials: "AC",
     quote:
       "O melhor investimento que fiz para meu negócio. A integração com WhatsApp profissionalizou meu atendimento completamente. Meus clientes adoram receber orçamentos pelo app!",
     rating: 5,
     metric: "100% satisfação",
-  },
-  {
-    name: "Pedro Oliveira",
-    business: "Ateliê Oliveira & Filhos",
-    location: "Curitiba, PR",
-    avatar: "/man-entrepreneur.png",
-    initials: "PO",
-    quote:
-      "Nunca mais perdi um prazo de entrega. Os lembretes automáticos e a agenda visual me ajudam a manter tudo organizado. Recomendo para todos os colegas do ramo!",
-    rating: 5,
-    metric: "0 atrasos",
   },
 ]
 
