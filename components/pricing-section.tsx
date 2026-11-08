@@ -424,19 +424,20 @@ export function PricingSection() {
             </div>
 
             {/* Carousel viewport - 3 cards por vez */}
-            <div className="overflow-hidden mx-auto max-w-6xl">
+            <div className="w-full overflow-hidden">
               <div
-                className="flex gap-6"
+                className="flex gap-6 px-4"
                 style={{
-                  transform: `translateX(-${carouselIndex * (100 / 3)}%)`,
+                  transform: `translateX(-${carouselIndex * 33.333}%)`,
                   transition: 'transform 500ms ease-out',
-                  width: `${Math.ceil(plans.length / 3) * 300}px`,
+                  width: '100%',
+                  display: 'flex',
                 }}
               >
                 {plans.map((plan, index) => {
                   const billing = plan.billing[billingCycle]
                   return (
-                    <div key={plan.id} className="w-1/3 px-3 flex-shrink-0">
+                    <div key={plan.id} style={{ flex: '0 0 calc(33.333% - 1rem)' }}>
                       <Card
                         className={`group relative h-full border-2 transition-all duration-500 ${
                           plan.recommended

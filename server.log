@@ -98,3 +98,84 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
 }
  GET / 500 in 4083ms
  GET / 500 in 460ms
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '1790870096'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '2990161876'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '2990161876'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '2990161876'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '1790870096'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '1790870096'
+}
+ ⨯ [TypeError: __webpack_modules__[moduleId] is not a function] {
+  digest: '1862661721'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '1790870096'
+}
+[TypeError: __webpack_modules__[moduleId] is not a function]
+ ⨯ [TypeError: __webpack_modules__[moduleId] is not a function]
+ ⨯ [TypeError: __webpack_modules__[moduleId] is not a function] {
+  page: '/'
+}
+ GET / 500 in 3423ms
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '1790870096'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '2990161876'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '2990161876'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>)
+    at stringify (<anonymous>) {
+  digest: '2990161876'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '1790870096'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '1790870096'
+}
+ ⨯ [TypeError: __webpack_modules__[moduleId] is not a function] {
+  digest: '1862661721'
+}
+ ⨯ Error: Could not find the module "D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\node_modules\next\dist\next-devtools\userspace\app\segment-explorer-node.js#SegmentViewNode" in the React Client Manifest. This is probably a bug in the React Server Components bundler.
+    at stringify (<anonymous>) {
+  digest: '1790870096'
+}
+[TypeError: __webpack_modules__[moduleId] is not a function]
+ ⨯ [TypeError: __webpack_modules__[moduleId] is not a function]
+ ⨯ [TypeError: __webpack_modules__[moduleId] is not a function] {
+  page: '/'
+}
+ GET / 500 in 3116ms
+ ✓ Compiled in 1055ms (1168 modules)
