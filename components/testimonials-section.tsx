@@ -70,22 +70,21 @@ export function TestimonialsSection() {
                 <CardContent className="pt-8 pb-6 px-6 relative">
                   <Quote className="absolute top-4 right-4 h-12 w-12 text-primary/10 group-hover:text-primary/20 transition-colors" />
 
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="flex gap-1">
+                  <div className="flex items-start justify-between mb-8">
+                    <div className="flex gap-1.5">
                       {Array.from({ length: testimonial.rating }).map((_, i) => (
-                        <Star key={i} className="h-5 w-5 fill-primary text-primary drop-shadow-sm" />
+                        <Star key={i} className="h-6 w-6 fill-amber-400 text-amber-400 drop-shadow-md" />
                       ))}
                     </div>
                     <Badge
-                      variant="secondary"
-                      className="gap-1.5 px-3 py-1 bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20 shadow-sm"
+                      className="gap-2 px-4 py-1.5 bg-gradient-to-r from-amber-100 to-orange-100 border-amber-300 text-amber-900 font-semibold text-sm shadow-md"
                     >
-                      <TrendingUp className="h-3.5 w-3.5" />
+                      <TrendingUp className="h-4 w-4" />
                       {testimonial.metric}
                     </Badge>
                   </div>
 
-                  <p className="text-foreground mb-8 leading-relaxed text-base italic">"{testimonial.quote}"</p>
+                  <p className="text-foreground mb-8 leading-relaxed text-lg italic">"{testimonial.quote}"</p>
 
                   <div className="flex items-center gap-4 pt-4 border-t border-border/50">
                     <div className="relative">
