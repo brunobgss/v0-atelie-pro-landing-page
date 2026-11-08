@@ -37,6 +37,28 @@ const testimonials = [
     rating: 5,
     metric: "100% satisfação",
   },
+  {
+    name: "Patricia Oliveira",
+    business: "Confecção PR Moda",
+    location: "Curitiba, PR",
+    avatar: "/patricia-oliveira.png",
+    initials: "PO",
+    quote:
+      "Antes eu anotava tudo em papel e perdia prazos. Agora com o Ateliê Pro, meus clientes veem o status em tempo real. Aumentei meu faturamento em 50% esse semestre!",
+    rating: 5,
+    metric: "+50% faturamento",
+  },
+  {
+    name: "Fernanda Gomes",
+    business: "Atelier Fernanda",
+    location: "Salvador, BA",
+    avatar: "/fernanda-gomes.png",
+    initials: "FG",
+    quote:
+      "A calculadora de preços é incrível! Nunca mais vendo no prejuízo. Meus lucros aumentaram drasticamente. É como ter um assessor financeiro dentro do app!",
+    rating: 5,
+    metric: "+45% lucro líquido",
+  },
 ]
 
 export function TestimonialsSection() {
@@ -52,10 +74,10 @@ export function TestimonialsSection() {
               Depoimentos
             </Badge>
             <h2 className="text-3xl font-bold tracking-tight text-balance text-foreground md:text-4xl lg:text-5xl mb-4 font-serif">
-              Quem Usa, Aprova
+              500+ Ateliês Aumentaram Lucro com Ateliê Pro
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty leading-relaxed">
-              Veja os resultados reais que nossos clientes alcançaram com o Ateliê Pro
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+              Confira como costureiras e confecções aumentaram vendas, organizaram pedidos e profissionalizaram atendimento em poucos dias
             </p>
           </div>
 
@@ -77,10 +99,10 @@ export function TestimonialsSection() {
                       ))}
                     </div>
                     <Badge
-                      className="gap-2 px-4 py-1.5 bg-gradient-to-r from-amber-100 to-orange-100 border-amber-300 text-amber-900 font-semibold text-sm shadow-md"
+                      className="gap-2 px-5 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-base shadow-lg"
                     >
-                      <TrendingUp className="h-4 w-4" />
-                      {testimonial.metric}
+                      <TrendingUp className="h-5 w-5" />
+                      {testimonial.metric.toUpperCase()}
                     </Badge>
                   </div>
 
@@ -98,8 +120,7 @@ export function TestimonialsSection() {
                     </div>
                     <div>
                       <div className="font-bold text-foreground text-lg">{testimonial.name}</div>
-                      <div className="text-sm text-muted-foreground font-semibold">{testimonial.business}</div>
-                      <div className="text-xs text-muted-foreground font-medium">{testimonial.location}</div>
+                      <div className="text-sm text-muted-foreground font-medium">{testimonial.business} • {testimonial.location}</div>
                     </div>
                   </div>
                 </CardContent>
