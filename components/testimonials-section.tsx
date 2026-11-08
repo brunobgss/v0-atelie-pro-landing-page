@@ -154,13 +154,13 @@ export function TestimonialsSection() {
                       <CardContent className="pt-8 pb-8 px-8 relative flex flex-col h-full">
                         <Quote className="absolute top-6 right-6 h-16 w-16 text-primary/15 group-hover:text-primary/25 transition-colors" />
 
-                        <div className="flex items-start justify-between mb-8">
+                        <div className="flex flex-col gap-4 mb-8">
                           <div className="flex gap-1.5">
                             {Array.from({ length: testimonial.rating }).map((_, i) => (
                               <Star key={i} className="h-6 w-6 fill-amber-400 text-amber-400 drop-shadow-md" />
                             ))}
                           </div>
-                          <Badge className="gap-2 px-5 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-base shadow-lg">
+                          <Badge className="gap-2 px-5 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold text-base shadow-lg w-fit">
                             <TrendingUp className="h-5 w-5" />
                             {testimonial.metric.toUpperCase()}
                           </Badge>
