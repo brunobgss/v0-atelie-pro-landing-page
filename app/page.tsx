@@ -13,6 +13,7 @@ import { CalculatorPreviewSection } from "@/components/calculator-preview-sectio
 import { BenefitsSection } from "@/components/benefits-section"
 import { ComparisonSection } from "@/components/comparison-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
+import { TestimonialsCTASection } from "@/components/testimonials-cta-section"
 import { PricingSection } from "@/components/pricing-section"
 import { FAQSection } from "@/components/faq-section"
 import { CTASection } from "@/components/cta-section"
@@ -33,6 +34,7 @@ export default function LandingPage() {
         <AgendaFeatureSection />
         <BenefitsSection />
         <TestimonialsSection />
+        <TestimonialsCTASection />
         <PricingSection />
         <FAQSection />
         <CTASection />
