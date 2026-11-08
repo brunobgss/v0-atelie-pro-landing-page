@@ -439,7 +439,7 @@ export function PricingSection() {
                   return (
                     <div key={plan.id} style={{ flex: '0 0 calc(33.333% - 1rem)' }}>
                       <Card
-                        className={`group relative h-full border-2 transition-all duration-500 ${
+                        className={`group relative border-2 transition-all duration-500 flex flex-col ${
                           plan.recommended
                             ? "border-pink-500/80 bg-white shadow-2xl shadow-pink-500/20 hover:-translate-y-2 hover:shadow-pink-500/40"
                             : "border-slate-200/60 bg-white/90 backdrop-blur hover:-translate-y-2 hover:border-slate-400/60 hover:shadow-xl"

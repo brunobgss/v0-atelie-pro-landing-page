@@ -179,3 +179,4 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
 }
  GET / 500 in 3116ms
  ✓ Compiled in 1055ms (1168 modules)
+ ✓ Compiled in 987ms (1075 modules)
