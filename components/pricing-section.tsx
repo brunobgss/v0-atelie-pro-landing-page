@@ -8,7 +8,7 @@ import { Check, X } from "lucide-react"
 import Link from "next/link"
 import { useUrgencyCountdown } from "@/hooks/useUrgencyCountdown"
 
-type BillingCycle = "monthly" | "annual"
+type BillingCycle = "monthly" | "quarterly"
 
 type PlanBadgeTone = "highlight" | "outline" | "subtle"
 
@@ -71,7 +71,7 @@ const plans: Plan[] = [
         analyticsId: "pricing-trial",
         badge: { label: "Comece agora", tone: "subtle" },
       },
-      annual: {
+      quarterly: {
         price: "Grátis",
         period: "7 dias",
         note: "Sem cartão de crédito. Renovação automática ao fim dos 7 dias (requer plano pago).",
@@ -108,14 +108,14 @@ const plans: Plan[] = [
         analyticsId: "pricing-basico-mensal",
         guarantee: "7 dias grátis para testar",
       },
-      annual: {
-        price: "R$ 390,00",
-        period: "/ano",
-        note: "Equivalente a R$ 32,50/mês. Economiza R$ 78 (2 meses grátis).",
-        ctaLabel: "Assinar anual",
-        ctaHref: "https://app.ateliepro.online?source=landing-pricing-basico-anual",
-        analyticsId: "pricing-basico-anual",
-        badge: { label: "2 meses grátis", tone: "highlight" },
+      quarterly: {
+        price: "R$ 79,90",
+        period: "/trimestre",
+        note: "Equivalente a R$ 26,63/mês. Economiza R$ 20 (melhor custo-benefício).",
+        ctaLabel: "Assinar trimestral",
+        ctaHref: "https://app.ateliepro.online?source=landing-pricing-basico-quarterly",
+        analyticsId: "pricing-basico-quarterly",
+        badge: { label: "Melhor custo-benefício", tone: "highlight" },
       },
     },
   },
@@ -147,14 +147,15 @@ const plans: Plan[] = [
         guarantee: "Onboarding fiscal guiado incluso",
         badge: { label: "Mais popular", tone: "highlight" },
       },
-      annual: {
-        price: "R$ 999,90",
-        period: "/ano",
-        note: "Equivalente a R$ 83,32/mês. Economiza ~R$ 300 (2 meses grátis).",
-        ctaLabel: "Assinar anual",
-        ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-anual",
-        analyticsId: "pricing-prof-anual",
-        badge: { label: "Economize R$ 300", tone: "highlight" },
+      quarterly: {
+        price: "R$ 99,90",
+        period: "/mês",
+        note: "Disponível apenas em ciclo mensal.",
+        ctaLabel: "Ativar plano",
+        ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-mensal",
+        analyticsId: "pricing-prof-mensal",
+        guarantee: "Onboarding fiscal guiado incluso",
+        badge: { label: "Mais popular", tone: "highlight" },
       },
     },
   },
@@ -183,13 +184,13 @@ const plans: Plan[] = [
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-plus",
         analyticsId: "pricing-prof-plus",
       },
-      annual: {
-        price: "Consulte",
-        period: "/ano",
-        note: "Fale com nosso time para descontos anuais.",
-        ctaLabel: "Falar com time",
-        ctaHref: "https://wa.me/5561982321534?text=Olá%20Ateliê%20Pro!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Plus%20anual",
-        analyticsId: "pricing-prof-plus-anual",
+      quarterly: {
+        price: "R$ 189,90",
+        period: "/mês",
+        note: "Disponível apenas em ciclo mensal.",
+        ctaLabel: "Ativar plano",
+        ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-plus",
+        analyticsId: "pricing-prof-plus",
       },
     },
   },
@@ -218,13 +219,13 @@ const plans: Plan[] = [
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-enterprise",
         analyticsId: "pricing-prof-enterprise",
       },
-      annual: {
-        price: "Consulte",
-        period: "/ano",
-        note: "Fale com nosso time para descontos especiais.",
-        ctaLabel: "Falar com time",
-        ctaHref: "https://wa.me/5561982321534?text=Olá%20Ateliê%20Pro!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20Enterprise%20anual",
-        analyticsId: "pricing-prof-enterprise-anual",
+      quarterly: {
+        price: "R$ 389,90",
+        period: "/mês",
+        note: "Disponível apenas em ciclo mensal.",
+        ctaLabel: "Ativar plano",
+        ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-enterprise",
+        analyticsId: "pricing-prof-enterprise",
       },
     },
   },
@@ -271,7 +272,7 @@ export function PricingSection() {
           </div>
 
           <div className="mx-auto mb-12 flex w-full max-w-md items-center justify-center rounded-full bg-white/80 p-1 shadow-inner shadow-purple-500/10">
-            {(["monthly", "annual"] as const).map((cycle) => {
+            {(["monthly", "quarterly"] as const).map((cycle) => {
               const isActive = billingCycle === cycle
               return (
                 <button
@@ -281,11 +282,11 @@ export function PricingSection() {
                   aria-pressed={isActive}
                   className={`flex-1 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 ${
                     isActive
-                      ? "bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 text-white shadow-lg shadow-purple-500/30"
-                      : "text-slate-600 hover:text-purple-600"
+                      ? "bg-pink-600 text-white shadow-lg shadow-pink-500/30"
+                      : "text-slate-600 hover:text-pink-600"
                   }`}
                 >
-                  {cycle === "monthly" ? "Faturamento mensal" : "Faturamento anual"}
+                  {cycle === "monthly" ? "Mensal" : "Trimestral"}
                 </button>
               )
             })}
