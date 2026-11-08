@@ -460,10 +460,12 @@ export function PricingSection() {
                   )}
 
                   <CardHeader className="space-y-5 text-center pt-8 pb-8 border-b border-slate-200/50">
-                    <CardTitle className="text-2xl font-semibold text-slate-900 min-h-24 flex items-center justify-center">
-                      {plan.name}
-                    </CardTitle>
-                    <p className="text-sm text-slate-500">{plan.description}</p>
+                    <div className="space-y-1.5">
+                      <CardTitle className="text-2xl font-semibold text-slate-900 min-h-16 flex items-center justify-center">
+                        {plan.name}
+                      </CardTitle>
+                      <p className="text-sm text-slate-500">{plan.description}</p>
+                    </div>
                     <div className="flex flex-col items-center gap-2">
                       <span className="text-5xl font-bold text-slate-900 font-serif">{billing.price}</span>
                       <span className="text-slate-600 font-medium">{billing.period}</span>
