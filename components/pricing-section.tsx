@@ -1,14 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Check, X } from "lucide-react"
+import { Check, X, ChevronLeft, ChevronRight } from "lucide-react"
 import Link from "next/link"
 import { useUrgencyCountdown } from "@/hooks/useUrgencyCountdown"
 
-type BillingCycle = "monthly" | "quarterly"
+type BillingCycle = "monthly" | "quarterly" | "annual"
 
 type PlanBadgeTone = "highlight" | "outline" | "subtle"
 
@@ -65,7 +65,7 @@ const plans: Plan[] = [
       monthly: {
         price: "Grátis",
         period: "7 dias",
-        note: "Sem cartão de crédito. Renovação automática ao fim dos 7 dias (requer plano pago).",
+        note: "Sem cartão de crédito. Renovação automática ao fim dos 7 dias.",
         ctaLabel: "Começar teste grátis",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-trial",
         analyticsId: "pricing-trial",
@@ -74,7 +74,16 @@ const plans: Plan[] = [
       quarterly: {
         price: "Grátis",
         period: "7 dias",
-        note: "Sem cartão de crédito. Renovação automática ao fim dos 7 dias (requer plano pago).",
+        note: "Sem cartão de crédito. Renovação automática ao fim dos 7 dias.",
+        ctaLabel: "Começar teste grátis",
+        ctaHref: "https://app.ateliepro.online?source=landing-pricing-trial",
+        analyticsId: "pricing-trial",
+        badge: { label: "Comece agora", tone: "subtle" },
+      },
+      annual: {
+        price: "Grátis",
+        period: "7 dias",
+        note: "Sem cartão de crédito. Renovação automática ao fim dos 7 dias.",
         ctaLabel: "Começar teste grátis",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-trial",
         analyticsId: "pricing-trial",
@@ -111,11 +120,20 @@ const plans: Plan[] = [
       quarterly: {
         price: "R$ 79,90",
         period: "/trimestre",
-        note: "Equivalente a R$ 26,63/mês. Economiza R$ 20 (melhor custo-benefício).",
-        ctaLabel: "Assinar trimestral",
+        note: "Equivalente a R$ 26,63/mês. Economiza R$ 20.",
+        ctaLabel: "Garantir promoção",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-basico-quarterly",
         analyticsId: "pricing-basico-quarterly",
-        badge: { label: "Melhor custo-benefício", tone: "highlight" },
+        badge: { label: "🎁 Pague 2, use 3", tone: "highlight" },
+      },
+      annual: {
+        price: "R$ 390,00",
+        period: "/ano",
+        note: "Equivalente a R$ 32,50/mês. Economiza R$ 78.",
+        ctaLabel: "Escolher plano",
+        ctaHref: "https://app.ateliepro.online?source=landing-pricing-basico-annual",
+        analyticsId: "pricing-basico-annual",
+        badge: { label: "💰 2 meses grátis", tone: "highlight" },
       },
     },
   },
@@ -140,22 +158,29 @@ const plans: Plan[] = [
       monthly: {
         price: "R$ 99,90",
         period: "/mês",
-        note: "Ative o módulo fiscal sem fidelidade e com onboarding guiado.",
-        ctaLabel: "Ativar plano",
+        note: "Até 100 notas fiscais/mês com onboarding guiado.",
+        ctaLabel: "Escolher plano",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-mensal",
         analyticsId: "pricing-prof-mensal",
-        guarantee: "Onboarding fiscal guiado incluso",
-        badge: { label: "Mais popular", tone: "highlight" },
+        badge: { label: "⭐ Mais popular", tone: "highlight" },
       },
       quarterly: {
-        price: "R$ 99,90",
-        period: "/mês",
-        note: "Disponível apenas em ciclo mensal.",
-        ctaLabel: "Ativar plano",
-        ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-mensal",
-        analyticsId: "pricing-prof-mensal",
-        guarantee: "Onboarding fiscal guiado incluso",
-        badge: { label: "Mais popular", tone: "highlight" },
+        price: "R$ 280,00",
+        period: "/trimestre",
+        note: "Equivalente a R$ 93,33/mês. Economiza R$ 19,70.",
+        ctaLabel: "Escolher plano",
+        ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-quarterly",
+        analyticsId: "pricing-prof-quarterly",
+        badge: { label: "💼 Upgrade com desconto", tone: "highlight" },
+      },
+      annual: {
+        price: "R$ 999,90",
+        period: "/ano",
+        note: "Equivalente a R$ 83,32/mês. Economiza R$ 199,90.",
+        ctaLabel: "Escolher plano",
+        ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-annual",
+        analyticsId: "pricing-prof-annual",
+        badge: { label: "💰 2 meses grátis", tone: "highlight" },
       },
     },
   },
@@ -179,16 +204,24 @@ const plans: Plan[] = [
       monthly: {
         price: "R$ 189,90",
         period: "/mês",
-        note: "Ideal para ateliés em crescimento com até 300 notas/mês.",
-        ctaLabel: "Ativar plano",
+        note: "Até 300 notas fiscais/mês. Até 5 operadores.",
+        ctaLabel: "Escolher plano",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-plus",
         analyticsId: "pricing-prof-plus",
       },
       quarterly: {
         price: "R$ 189,90",
         period: "/mês",
-        note: "Disponível apenas em ciclo mensal.",
-        ctaLabel: "Ativar plano",
+        note: "Disponível em ciclo mensal.",
+        ctaLabel: "Escolher plano",
+        ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-plus",
+        analyticsId: "pricing-prof-plus",
+      },
+      annual: {
+        price: "R$ 189,90",
+        period: "/mês",
+        note: "Disponível em ciclo mensal.",
+        ctaLabel: "Escolher plano",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-plus",
         analyticsId: "pricing-prof-plus",
       },
@@ -214,16 +247,24 @@ const plans: Plan[] = [
       monthly: {
         price: "R$ 389,90",
         period: "/mês",
-        note: "Para ateliés com múltiplos confeccionistas e alto volume.",
-        ctaLabel: "Ativar plano",
+        note: "Até 1.000 notas/mês. Até 5 operadores. Alto volume.",
+        ctaLabel: "Escolher plano",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-enterprise",
         analyticsId: "pricing-prof-enterprise",
       },
       quarterly: {
         price: "R$ 389,90",
         period: "/mês",
-        note: "Disponível apenas em ciclo mensal.",
-        ctaLabel: "Ativar plano",
+        note: "Disponível em ciclo mensal.",
+        ctaLabel: "Escolher plano",
+        ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-enterprise",
+        analyticsId: "pricing-prof-enterprise",
+      },
+      annual: {
+        price: "R$ 389,90",
+        period: "/mês",
+        note: "Disponível em ciclo mensal.",
+        ctaLabel: "Escolher plano",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-prof-enterprise",
         analyticsId: "pricing-prof-enterprise",
       },
@@ -233,8 +274,16 @@ const plans: Plan[] = [
 
 export function PricingSection() {
   const [billingCycle, setBillingCycle] = useState<BillingCycle>("monthly")
-  // ATELIEPRO_CHANGE: Melhoria 2 - Adicionar hook de urgência
+  const [carouselIndex, setCarouselIndex] = useState(0)
   const countdown = useUrgencyCountdown()
+
+  const handlePrevious = () => {
+    setCarouselIndex((prev) => Math.max(0, prev - 1))
+  }
+
+  const handleNext = () => {
+    setCarouselIndex((prev) => Math.min(Math.max(0, plans.length - 3), prev + 1))
+  }
 
   return (
     <section id="precos" className="py-20 md:py-28 bg-gradient-to-b from-slate-50 via-white to-slate-50 relative overflow-hidden">
@@ -271,8 +320,8 @@ export function PricingSection() {
             </p>
           </div>
 
-          <div className="mx-auto mb-12 flex w-full max-w-md items-center justify-center rounded-full bg-white/80 p-1 shadow-inner shadow-purple-500/10">
-            {(["monthly", "quarterly"] as const).map((cycle) => {
+          <div className="mx-auto mb-12 flex w-full max-w-2xl items-center justify-center gap-2 rounded-full bg-white/80 p-1 shadow-inner">
+            {(["monthly", "quarterly", "annual"] as const).map((cycle) => {
               const isActive = billingCycle === cycle
               return (
                 <button
@@ -286,7 +335,7 @@ export function PricingSection() {
                       : "text-slate-600 hover:text-pink-600"
                   }`}
                 >
-                  {cycle === "monthly" ? "Mensal" : "Trimestral"}
+                  {cycle === "monthly" ? "Mensal" : cycle === "quarterly" ? "Trimestral" : "Anual"}
                 </button>
               )
             })}
@@ -349,19 +398,50 @@ export function PricingSection() {
             </div>
           )}
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {plans.map((plan, index) => {
-              const billing = plan.billing[billingCycle]
-              return (
-                <Card
-                  key={plan.id}
-                  className={`group relative h-full border-2 transition-all duration-500 ${
-                    plan.recommended
-                      ? "border-purple-500/80 bg-white shadow-2xl shadow-purple-500/20 hover:-translate-y-3 hover:shadow-purple-500/40 md:col-span-2 lg:col-span-1"
-                      : "border-purple-200/40 bg-white/90 backdrop-blur hover:-translate-y-2 hover:border-purple-400/60 hover:shadow-xl"
-                  } animate-fade-in`}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
+          {/* Carrossel horizontal com 3 cards visíveis */}
+          <div className="relative">
+            {/* Botões de navegação */}
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10">
+              <button
+                onClick={handlePrevious}
+                disabled={carouselIndex === 0}
+                className="p-2 rounded-full bg-pink-600 text-white hover:bg-pink-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                aria-label="Planos anteriores"
+              >
+                <ChevronLeft className="h-6 w-6" />
+              </button>
+            </div>
+
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10">
+              <button
+                onClick={handleNext}
+                disabled={carouselIndex >= Math.max(0, plans.length - 3)}
+                className="p-2 rounded-full bg-pink-600 text-white hover:bg-pink-700 disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                aria-label="Próximos planos"
+              >
+                <ChevronRight className="h-6 w-6" />
+              </button>
+            </div>
+
+            {/* Carousel viewport */}
+            <div className="overflow-hidden px-4">
+              <div
+                className="flex gap-8 transition-transform duration-500"
+                style={{
+                  transform: `translateX(calc(-${carouselIndex} * (100% / 3 + 2rem)))`,
+                }}
+              >
+                {plans.map((plan, index) => {
+                  const billing = plan.billing[billingCycle]
+                  return (
+                    <div key={plan.id} className="min-w-[calc(33.333% - 1.5rem)]">
+                      <Card
+                        className={`group relative h-full border-2 transition-all duration-500 ${
+                          plan.recommended
+                            ? "border-pink-500/80 bg-white shadow-2xl shadow-pink-500/20 hover:-translate-y-2 hover:shadow-pink-500/40"
+                            : "border-slate-200/60 bg-white/90 backdrop-blur hover:-translate-y-2 hover:border-slate-400/60 hover:shadow-xl"
+                        }`}
+                      >
                   {billing.badge && (
                     <Badge
                       className={`absolute -top-3 left-1/2 -translate-x-1/2 shadow-lg ${
@@ -456,7 +536,7 @@ export function PricingSection() {
                       size="lg"
                       className={`h-12 w-full font-semibold transition-all duration-300 ${
                         plan.recommended
-                          ? "bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-md hover:shadow-xl"
+                          ? "bg-pink-600 hover:bg-pink-700 text-white shadow-md hover:shadow-xl"
                           : "bg-slate-900 text-white shadow-md hover:shadow-lg hover:bg-slate-800"
                       }`}
                     >
@@ -473,9 +553,12 @@ export function PricingSection() {
                       <p className="text-xs text-slate-500 text-center">{billing.guarantee}</p>
                     )}
                   </CardFooter>
-                </Card>
-              )
-            })}
+                      </Card>
+                    </div>
+                  )
+                })}
+              </div>
+            </div>
           </div>
 
           <div className="mt-12 space-y-4 text-center animate-fade-in" style={{ animationDelay: "0.45s" }}>
