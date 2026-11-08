@@ -13,18 +13,18 @@ export function TestimonialsCTASection() {
 
       <div className="container relative px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-balance text-foreground md:text-4xl lg:text-5xl mb-6 font-serif">
+          <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-balance text-foreground md:text-4xl lg:text-5xl mb-6 font-serif">
             Você Pode Ser O Próximo
           </h2>
 
-          <p className="text-lg text-muted-foreground max-w-xl mx-auto text-pretty leading-relaxed mb-8">
+          <p className="text-base sm:text-lg text-muted-foreground max-w-xl mx-auto text-pretty leading-relaxed mb-8">
             Mais de 500 ateliês já têm faturamento aumentado. Teste grátis por 7 dias, sem cartão de crédito.
           </p>
 
           <Button
             size="lg"
             asChild
-            className="text-base px-12 h-14 shadow-2xl shadow-pink-500/40 hover:shadow-3xl hover:shadow-pink-500/60 hover:scale-105 transition-all duration-300 bg-pink-600 hover:bg-pink-700 text-white font-semibold border-0"
+            className="w-full sm:w-auto text-base px-12 h-12 sm:h-14 shadow-2xl shadow-pink-500/40 hover:shadow-3xl hover:shadow-pink-500/60 hover:scale-105 transition-all duration-300 bg-pink-600 hover:bg-pink-700 text-white font-semibold border-0"
           >
             <Link
               href="https://app.ateliepro.online?source=landing-testimonials-cta"

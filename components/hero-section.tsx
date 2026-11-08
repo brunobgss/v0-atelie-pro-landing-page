@@ -6,7 +6,7 @@ import { HeroVideoPlayer } from "@/components/hero-video-player"
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20 md:py-32">
+    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-16 md:py-32">
       {/* Subtle background gradient */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-96 h-96 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-full blur-3xl" />
@@ -23,22 +23,22 @@ export function HeroSection() {
             <Sparkles className="w-4 h-4 mr-2 inline animate-pulse" />7 dias grátis • Sem cartão • Sem compromisso
           </Badge>
 
-          <h1 className="mb-6 text-4xl font-bold tracking-tight text-balance text-white md:text-5xl lg:text-6xl font-sans animate-fade-in">
+          <h1 className="mb-6 text-2xl font-bold tracking-tight text-balance text-white sm:text-4xl md:text-5xl lg:text-6xl font-sans animate-fade-in">
             Precificação Inteligente + Gestão de Pedidos em Um Lugar
           </h1>
 
           <p
-            className="mb-10 text-lg text-pretty text-purple-100 md:text-xl max-w-3xl mx-auto leading-relaxed animate-fade-in"
+            className="mb-10 text-base text-pretty text-purple-100 sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
             Aumente lucro em até 40%, organize pedidos, envie orçamentos profissionais no WhatsApp. Teste grátis por 7 dias, sem cartão.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 items-center justify-center mb-12 animate-fade-in w-full sm:w-auto" style={{ animationDelay: "0.4s" }}>
             <Button
               size="lg"
               asChild
-              className="text-base px-10 h-14 shadow-2xl shadow-pink-500/40 hover:shadow-3xl hover:shadow-pink-500/60 hover:scale-105 transition-all duration-300 bg-pink-600 hover:bg-pink-700 text-white font-semibold border-0"
+              className="w-full sm:w-auto text-base px-10 h-12 sm:h-14 shadow-2xl shadow-pink-500/40 hover:shadow-3xl hover:shadow-pink-500/60 hover:scale-105 transition-all duration-300 bg-pink-600 hover:bg-pink-700 text-white font-semibold border-0"
             >
               <Link
                 href="https://app.ateliepro.online?source=landing-hero-primary"
@@ -55,7 +55,7 @@ export function HeroSection() {
               size="lg"
               variant="outline"
               asChild
-              className="text-base px-10 h-14 gap-3 bg-white/10 backdrop-blur-md hover:bg-white/20 hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 border-white/30 text-white"
+              className="w-full sm:w-auto text-base px-10 h-12 sm:h-14 gap-3 bg-white/10 backdrop-blur-md hover:bg-white/20 hover:shadow-2xl hover:shadow-white/20 transition-all duration-300 border-white/30 text-white"
             >
               <Link href="#demo-video" data-analytics="cta-hero-demo" aria-label="Ver demonstração em vídeo do Ateliê Pro">
                 <Play className="h-5 w-5" />
