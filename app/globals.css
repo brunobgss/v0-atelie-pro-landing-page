@@ -139,27 +139,21 @@
 
 @layer utilities {
   .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
+    animation: fadeIn 0.5s ease-out forwards;
   }
 
   .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
+    animation: slideUp 0.5s ease-out forwards;
   }
 
   .animate-fade-in-delayed {
-    animation: fadeIn 0.6s ease-out 1.5s forwards;
+    animation: fadeIn 0.5s ease-out 0.8s forwards;
+    opacity: 0;
   }
 
   .animate-slide-up-delayed {
-    animation: slideUp 0.6s ease-out 1.5s forwards;
-  }
-
-  .animate-float {
-    animation: float 3s ease-in-out infinite;
-  }
-
-  .animate-float-delayed {
-    animation: float 3s ease-in-out 1.5s infinite;
+    animation: slideUp 0.5s ease-out 0.8s forwards;
+    opacity: 0;
   }
 
   .perspective-1000 {
@@ -168,29 +162,6 @@
 
   .bg-grid-slate-100 {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' width='32' height='32' fill='none' stroke='rgb(148 163 184 / 0.05)'%3e%3cpath d='M0 .5H31.5V32'/%3e%3c/svg%3e");
-  }
-
-  .glass-effect {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-  }
-
-  .gradient-border {
-    position: relative;
-    background: white;
-  }
-
-  .gradient-border::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: inherit;
-    padding: 2px;
-    background: linear-gradient(135deg, #8b5cf6, #d946ef);
-    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-    -webkit-mask-composite: xor;
-    mask-composite: exclude;
   }
 
   .shadow-3xl {
@@ -210,20 +181,10 @@
 @keyframes slideUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(20px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%,
-  100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
   }
 }
