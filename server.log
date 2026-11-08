@@ -223,3 +223,6 @@ Require stack:
 <w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: EPERM: operation not permitted, rename 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\cache\webpack\client-development\1.pack.gz_' -> 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\cache\webpack\client-development\1.pack.gz'
 <w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\cache\webpack\server-development\0.pack.gz_' -> 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\cache\webpack\server-development\0.pack.gz'
  ✓ Compiled in 785ms (1075 modules)
+<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\cache\webpack\server-development\0.pack.gz_' -> 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\cache\webpack\server-development\0.pack.gz'
+ ✓ Compiled in 732ms (1075 modules)
+ ✓ Compiled in 614ms (1075 modules)

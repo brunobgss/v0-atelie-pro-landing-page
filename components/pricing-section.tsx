@@ -69,7 +69,7 @@ const plans: Plan[] = [
         ctaLabel: "Começar teste grátis",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-trial",
         analyticsId: "pricing-trial",
-        badge: { label: "Comece agora", tone: "subtle" },
+        badge: { label: "Comece agora", tone: "highlight" },
       },
       quarterly: {
         price: "Grátis",
@@ -78,7 +78,7 @@ const plans: Plan[] = [
         ctaLabel: "Começar teste grátis",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-trial",
         analyticsId: "pricing-trial",
-        badge: { label: "Comece agora", tone: "subtle" },
+        badge: { label: "Comece agora", tone: "highlight" },
       },
       annual: {
         price: "Grátis",
@@ -87,7 +87,7 @@ const plans: Plan[] = [
         ctaLabel: "Começar teste grátis",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-trial",
         analyticsId: "pricing-trial",
-        badge: { label: "Comece agora", tone: "subtle" },
+        badge: { label: "Comece agora", tone: "highlight" },
       },
     },
   },
@@ -459,25 +459,25 @@ export function PricingSection() {
                     </Badge>
                   )}
 
-                  <CardHeader className="space-y-4 text-center pt-8 pb-8">
+                  <CardHeader className="space-y-5 text-center pt-8 pb-8 border-b border-slate-200/50">
                     <CardTitle className="text-2xl font-semibold text-slate-900 min-h-24 flex items-center justify-center">
                       {plan.name}
                     </CardTitle>
                     <p className="text-sm text-slate-500">{plan.description}</p>
-                    <div className="flex flex-col items-center gap-1">
+                    <div className="flex flex-col items-center gap-2">
                       <span className="text-5xl font-bold text-slate-900 font-serif">{billing.price}</span>
-                      <span className="text-slate-600">{billing.period}</span>
+                      <span className="text-slate-600 font-medium">{billing.period}</span>
                     </div>
                     {plan.nfLimit > 0 && (
                       <p className="text-xs font-semibold text-purple-600 bg-purple-50 rounded-full py-1 px-3 inline-block mx-auto">
                         Até {plan.nfLimit.toLocaleString("pt-BR")} notas fiscais/mês
                       </p>
                     )}
-                    <p className="text-xs text-slate-500">{billing.note}</p>
+                    <p className="text-xs text-slate-500 leading-relaxed">{billing.note}</p>
                   </CardHeader>
 
-                  <CardContent>
-                    <ul className="space-y-3">
+                  <CardContent className="pt-8">
+                    <ul className="space-y-4">
                       {plan.features.map((feature) => (
                         <li key={feature.text} className="flex items-start gap-3 text-left">
                           <span
