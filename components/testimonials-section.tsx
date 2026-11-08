@@ -67,8 +67,8 @@ export function TestimonialsSection() {
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                <CardContent className="pt-8 pb-6 px-6 relative">
-                  <Quote className="absolute top-4 right-4 h-12 w-12 text-primary/10 group-hover:text-primary/20 transition-colors" />
+                <CardContent className="pt-8 pb-8 px-8 relative">
+                  <Quote className="absolute top-6 right-6 h-16 w-16 text-primary/15 group-hover:text-primary/25 transition-colors" />
 
                   <div className="flex items-start justify-between mb-8">
                     <div className="flex gap-1.5">
@@ -86,10 +86,10 @@ export function TestimonialsSection() {
 
                   <p className="text-foreground mb-8 leading-relaxed text-lg italic">"{testimonial.quote}"</p>
 
-                  <div className="flex items-center gap-4 pt-4 border-t border-border/50">
+                  <div className="flex items-center gap-4 pt-6 border-t border-border/50">
                     <div className="relative">
                       <div className="absolute inset-0 bg-gradient-to-br from-primary to-secondary rounded-full blur-sm opacity-50" />
-                      <Avatar className="h-14 w-14 border-2 border-background relative">
+                      <Avatar className="h-16 w-16 border-2 border-background relative">
                         <AvatarImage src={testimonial.avatar || "/placeholder.svg"} alt={testimonial.name} />
                         <AvatarFallback className="bg-gradient-to-br from-primary to-secondary text-primary-foreground font-semibold">
                           {testimonial.initials}
@@ -97,9 +97,9 @@ export function TestimonialsSection() {
                       </Avatar>
                     </div>
                     <div>
-                      <div className="font-semibold text-foreground text-base">{testimonial.name}</div>
-                      <div className="text-sm text-muted-foreground font-medium">{testimonial.business}</div>
-                      <div className="text-xs text-muted-foreground">{testimonial.location}</div>
+                      <div className="font-bold text-foreground text-lg">{testimonial.name}</div>
+                      <div className="text-sm text-muted-foreground font-semibold">{testimonial.business}</div>
+                      <div className="text-xs text-muted-foreground font-medium">{testimonial.location}</div>
                     </div>
                   </div>
                 </CardContent>
