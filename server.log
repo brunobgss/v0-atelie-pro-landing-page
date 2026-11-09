@@ -296,3 +296,6 @@ Read more: https://nextjs.org/docs/messages/next-image-unconfigured-qualities
 <w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\cache\webpack\server-development\0.pack.gz_' -> 'D:\PROJETOS\LP ATELIE PRO NOV 26\v0-atelie-pro-landing-page\.next\cache\webpack\server-development\0.pack.gz'
  ✓ Compiled in 770ms (1083 modules)
  ✓ Compiled in 489ms (1083 modules)
+ ✓ Compiled in 1303ms (1083 modules)
+ ✓ Compiled in 674ms (1083 modules)
+ ✓ Compiled in 636ms (1083 modules)

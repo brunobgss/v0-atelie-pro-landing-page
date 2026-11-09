@@ -17,24 +17,24 @@ export function HeroSection() {
         <div className="mx-auto max-w-5xl text-center">
           <Badge
             variant="secondary"
-            className="mb-6 px-6 py-3 text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-400/30 text-white shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
+            className="mb-8 md:mb-6 px-6 py-3 text-xs sm:text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-400/30 text-white shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
           >
             {/* melhoria de conversão: urgência + eliminação de objeções */}
             <Sparkles className="w-4 h-4 mr-2 inline animate-pulse" />7 dias grátis • Sem cartão • Sem compromisso
           </Badge>
 
-          <h1 className="mb-6 text-2xl font-bold tracking-tight text-balance text-white sm:text-4xl md:text-5xl lg:text-6xl font-sans animate-fade-in">
+          <h1 className="mb-8 md:mb-6 text-2xl font-bold tracking-tight text-balance text-white sm:text-3xl md:text-5xl lg:text-6xl font-sans animate-fade-in leading-snug">
             Precificação Inteligente + Gestão de Pedidos em Um Lugar
           </h1>
 
           <p
-            className="mb-10 text-base text-pretty text-purple-100 sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed animate-fade-in"
+            className="mb-12 md:mb-10 text-base text-pretty text-purple-100 sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
             Aumente lucro em até 40%, organize pedidos, envie orçamentos profissionais no WhatsApp. Teste grátis por 7 dias, sem cartão.
           </p>
 
-          <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 items-center justify-center mb-12 animate-fade-in w-full sm:w-auto" style={{ animationDelay: "0.4s" }}>
+          <div className="flex flex-col gap-4 sm:flex-row sm:gap-4 items-center justify-center mb-12 md:mb-16 animate-fade-in w-full sm:w-auto" style={{ animationDelay: "0.4s" }}>
             <Button
               size="lg"
               asChild
@@ -65,28 +65,28 @@ export function HeroSection() {
           </div>
 
           {/* ATELIEPRO_CHANGE: Melhoria 4 - Texto de tranquilização pós-trial (Lugar A) */}
-          <p className="text-xs text-purple-200/80 text-center mb-16 animate-fade-in" style={{ animationDelay: "0.7s" }}>
+          <p className="text-xs sm:text-sm text-purple-200/80 text-center mb-16 md:mb-20 animate-fade-in leading-relaxed px-2" style={{ animationDelay: "0.7s" }}>
             🔒 No 6º dia você recebe um e-mail de aviso. Se não quiser continuar, cancele com 1 clique — sem pegadinhas, sem cobrança automática surpresa.
           </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-6 text-sm text-purple-200 mb-16 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <CheckCircle2 className="h-4 w-4 text-green-400" />
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-purple-200 mb-16 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <CheckCircle2 className="h-4 w-4 text-green-400 flex-shrink-0" />
               <span>Sem instalação</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <CheckCircle2 className="h-4 w-4 text-green-400" />
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <CheckCircle2 className="h-4 w-4 text-green-400 flex-shrink-0" />
               <span>Backup automático</span>
             </div>
-            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
-              <CheckCircle2 className="h-4 w-4 text-green-400" />
+            <div className="flex items-center gap-2 bg-white/10 backdrop-blur-sm px-3 sm:px-4 py-2 rounded-full border border-white/20 hover:bg-white/20 transition-all duration-300">
+              <CheckCircle2 className="h-4 w-4 text-green-400 flex-shrink-0" />
               <span>Suporte especializado</span>
             </div>
           </div>
         </div>
 
         {/* ATELIEPRO_CHANGE: Melhoria 5 - Player de vídeo na hero section */}
-        <div className="mx-auto mt-8 max-w-6xl animate-fade-in" style={{ animationDelay: "0.8s" }}>
+        <div className="mx-auto mt-12 md:mt-8 max-w-6xl animate-fade-in px-2 sm:px-0" style={{ animationDelay: "0.8s" }}>
           <HeroVideoPlayer />
         </div>
       </div>
