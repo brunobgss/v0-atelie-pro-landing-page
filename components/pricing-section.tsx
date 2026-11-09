@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -275,6 +275,8 @@ const plans: Plan[] = [
 export function PricingSection() {
   const [billingCycle, setBillingCycle] = useState<BillingCycle>("monthly")
   const [carouselIndex, setCarouselIndex] = useState(0)
+  const [touchStart, setTouchStart] = useState(0)
+  const [touchEnd, setTouchEnd] = useState(0)
   const countdown = useUrgencyCountdown()
 
   const handlePrevious = () => {
@@ -283,6 +285,24 @@ export function PricingSection() {
 
   const handleNext = () => {
     setCarouselIndex((prev) => Math.min(Math.max(0, plans.length - 3), prev + 1))
+  }
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setTouchStart(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    setTouchEnd(e.changedTouches[0].clientX)
+    handleSwipe()
+  }
+
+  const handleSwipe = () => {
+    if (touchStart - touchEnd > 50) {
+      handleNext()
+    }
+    if (touchEnd - touchStart > 50) {
+      handlePrevious()
+    }
   }
 
   return (
@@ -431,7 +451,7 @@ export function PricingSection() {
             </div>
 
             {/* Carousel viewport - 3 cards por vez */}
-            <div className="w-full overflow-hidden">
+            <div className="w-full overflow-hidden" onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
               <div
                 className="flex gap-6 px-4"
                 style={{
@@ -440,6 +460,8 @@ export function PricingSection() {
                   width: '100%',
                   display: 'flex',
                 }}
+                onTouchStart={handleTouchStart}
+                onTouchEnd={handleTouchEnd}
               >
                 {plans.map((plan, index) => {
                   const billing = plan.billing[billingCycle]
