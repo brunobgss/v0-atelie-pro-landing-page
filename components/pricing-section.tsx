@@ -398,10 +398,17 @@ export function PricingSection() {
             </div>
           )}
 
+          {/* Indicador de swipe para mobile */}
+          <div className="md:hidden text-center mb-4 flex items-center justify-center gap-2 text-sm text-slate-500 animate-pulse">
+            <span>←</span>
+            <span>Deslize para ver mais</span>
+            <span>→</span>
+          </div>
+
           {/* Carrossel horizontal com 3 cards visíveis */}
           <div className="relative">
-            {/* Botões de navegação */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10">
+            {/* Botões de navegação - desktop only */}
+            <div className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 z-10">
               <button
                 onClick={handlePrevious}
                 disabled={carouselIndex === 0}
@@ -412,7 +419,7 @@ export function PricingSection() {
               </button>
             </div>
 
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10">
+            <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 z-10">
               <button
                 onClick={handleNext}
                 disabled={carouselIndex >= Math.max(0, plans.length - 3)}
