@@ -107,7 +107,7 @@ export function WhatsAppFeatureSection() {
                     size="lg"
                     className="h-11 w-full bg-gradient-to-r from-green-600 to-emerald-500 text-white shadow-lg hover:shadow-xl md:w-auto"
                   >
-                    <Link href="https://app.ateliepro.online" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://app.ateliepro.online/cadastro" target="_blank" rel="noopener noreferrer">
                       Gerar orçamento agora
                     </Link>
                   </Button>

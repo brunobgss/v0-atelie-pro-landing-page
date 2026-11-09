@@ -162,9 +162,9 @@ export function AppDemoSection() {
         {/* CTA */}
         <div className="text-center mt-16">
           <p className="text-slate-600 mb-6 text-lg">Pronto para experimentar todas essas funcionalidades?</p>
-          <Link 
-            href="https://app.ateliepro.online" 
-            target="_blank" 
+          <Link
+            href="https://app.ateliepro.online/cadastro"
+            target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
           >

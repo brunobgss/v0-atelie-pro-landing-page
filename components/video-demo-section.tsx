@@ -57,7 +57,7 @@ export function VideoDemoSection() {
                 className="h-12 w-full sm:w-auto bg-gradient-to-r from-purple-600 via-purple-500 to-pink-600 text-white shadow-lg shadow-purple-500/30 hover:shadow-purple-500/40 hover:scale-105 transition-all duration-300"
               >
                 <Link
-                  href="https://app.ateliepro.online"
+                  href="https://app.ateliepro.online/cadastro"
                   target="_blank"
                   rel="noopener noreferrer"
                   data-analytics="cta-demo-video-primary"

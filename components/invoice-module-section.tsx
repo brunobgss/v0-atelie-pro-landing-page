@@ -74,7 +74,7 @@ export function InvoiceModuleSection() {
               className="h-12 w-full sm:w-auto bg-white text-slate-900 shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all"
             >
               <Link
-                href="https://app.ateliepro.online"
+                href="https://app.ateliepro.online/cadastro"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-analytics="cta-invoice-module-primary"

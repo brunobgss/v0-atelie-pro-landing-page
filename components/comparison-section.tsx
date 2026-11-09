@@ -144,7 +144,7 @@ export function ComparisonSection() {
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-500 hover:to-pink-500 text-white shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             >
               <Link
-                href="https://app.ateliepro.online"
+                href="https://app.ateliepro.online/cadastro"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-analytics="cta-comparison"

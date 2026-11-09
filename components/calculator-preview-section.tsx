@@ -260,7 +260,7 @@ export function CalculatorPreviewSection() {
                         size="lg"
                         className="w-full h-12 bg-gradient-to-r from-primary via-primary to-secondary text-white font-semibold shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
                       >
-                        <Link href="https://app.ateliepro.online" target="_blank" rel="noopener noreferrer">
+                        <Link href="https://app.ateliepro.online/cadastro" target="_blank" rel="noopener noreferrer">
                           CRIAR MINHA CONTA GRÁTIS →
                         </Link>
                       </Button>

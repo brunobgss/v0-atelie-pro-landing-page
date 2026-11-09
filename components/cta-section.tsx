@@ -45,9 +45,9 @@ export function CTASection() {
               asChild
               className="text-base px-12 h-16 gap-3 shadow-2xl hover:shadow-3xl transition-all hover:scale-110 font-semibold text-lg group bg-gradient-to-r from-white to-purple-50 text-purple-900 hover:from-purple-50 hover:to-white border-0"
             >
-              <Link 
-                href="https://app.ateliepro.online" 
-                target="_blank" 
+              <Link
+                href="https://app.ateliepro.online/cadastro"
+                target="_blank"
                 rel="noopener noreferrer"
                 data-analytics="cta-final-primary"
                 aria-label="Começar teste grátis agora"

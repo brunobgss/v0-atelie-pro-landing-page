@@ -27,7 +27,7 @@ export function TestimonialsCTASection() {
             className="w-full sm:w-auto text-base px-12 h-12 sm:h-14 shadow-2xl shadow-pink-500/40 hover:shadow-3xl hover:shadow-pink-500/60 hover:scale-105 transition-all duration-300 bg-pink-600 hover:bg-pink-700 text-white font-semibold border-0"
           >
             <Link
-              href="https://app.ateliepro.online?source=landing-testimonials-cta"
+              href="https://app.ateliepro.online/cadastro?source=landing-testimonials-cta"
               target="_blank"
               rel="noopener noreferrer"
               data-analytics="cta-testimonials-primary"
