@@ -32,10 +32,10 @@ export function HeroVideoPlayer() {
           >
             <div className="relative aspect-video bg-slate-950">
               <Image
-                src="/demo-profissional-ateliepro-h-folha.jpg"
+                src="/dashboard-screenshot.png"
                 alt="Pré-visualização do vídeo de demonstração do Ateliê Pro"
                 fill
-                className="object-cover"
+                className="object-cover brightness-105 contrast-110"
                 priority
                 quality={90}
               />
@@ -61,7 +61,7 @@ export function HeroVideoPlayer() {
               className="h-full w-full"
               controls
               autoPlay
-              poster="/demo-profissional-ateliepro-h-folha.jpg"
+              poster="/dashboard-screenshot.png"
             >
               <source src="/demo-profissional-ateliepro.mp4" type="video/mp4" />
               Seu navegador não suporta vídeo HTML5.
