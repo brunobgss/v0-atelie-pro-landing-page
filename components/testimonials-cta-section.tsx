@@ -39,7 +39,7 @@ export function TestimonialsCTASection() {
           </Button>
 
           <p className="text-xs text-muted-foreground mt-6">
-            🔒 No 6º dia você recebe um e-mail de aviso. Se não quiser continuar, cancele com 1 clique.
+            🔒 No 6º dia você recebe um e-mail de aviso que o teste está acabando. Para continuar, escolha um plano.
           </p>
         </div>
       </div>

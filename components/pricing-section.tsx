@@ -113,7 +113,7 @@ const plans: Plan[] = [
       monthly: {
         price: "Grátis",
         period: "7 dias",
-        note: "Sem cartão de crédito. Renovação automática ao fim dos 7 dias.",
+        note: "Sem cartão de crédito. Sem cobrança automática.",
         ctaLabel: "Começar teste grátis",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-trial",
         analyticsId: "pricing-trial",
@@ -122,7 +122,7 @@ const plans: Plan[] = [
       quarterly: {
         price: "Grátis",
         period: "7 dias",
-        note: "Sem cartão de crédito. Renovação automática ao fim dos 7 dias.",
+        note: "Sem cartão de crédito. Sem cobrança automática.",
         ctaLabel: "Começar teste grátis",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-trial",
         analyticsId: "pricing-trial",
@@ -131,7 +131,7 @@ const plans: Plan[] = [
       annual: {
         price: "Grátis",
         period: "7 dias",
-        note: "Sem cartão de crédito. Renovação automática ao fim dos 7 dias.",
+        note: "Sem cartão de crédito. Sem cobrança automática.",
         ctaLabel: "Começar teste grátis",
         ctaHref: "https://app.ateliepro.online?source=landing-pricing-trial",
         analyticsId: "pricing-trial",

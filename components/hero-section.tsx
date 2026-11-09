@@ -66,7 +66,7 @@ export function HeroSection() {
 
           {/* ATELIEPRO_CHANGE: Melhoria 4 - Texto de tranquilização pós-trial (Lugar A) */}
           <p className="text-xs sm:text-sm text-purple-200/80 text-center mb-16 md:mb-20 animate-fade-in leading-relaxed px-2" style={{ animationDelay: "0.7s" }}>
-            🔒 No 6º dia você recebe um e-mail de aviso. Se não quiser continuar, cancele com 1 clique — sem pegadinhas, sem cobrança automática surpresa.
+            🔒 No 6º dia você recebe um e-mail de aviso que o teste está acabando. Para continuar usando, escolha um plano. Sem compromisso antes disso.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-xs sm:text-sm text-purple-200 mb-16 animate-fade-in" style={{ animationDelay: "0.6s" }}>
