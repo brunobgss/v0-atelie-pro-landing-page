@@ -6,7 +6,7 @@ const problems = [
   "📱 Um pedido perdido no WhatsApp = dinheiro que sumiu",
   "⏰ Atraso = cliente chateado = reputação manchada",
   "❌ Sem organização = retrabalho = horas perdidas",
-  "� Seus clientes acham que você é amadora (mesmo sendo boa)",
+  "😔 Seus clientes acham que você é amadora (mesmo sendo boa)",
 ]
 
 export function ProblemsSection() {

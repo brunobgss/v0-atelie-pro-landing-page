@@ -133,7 +133,7 @@ const features = [
     icon: Bell,
     title: "Lembretes que Salvam",
     description:
-      "Automático avisa antes que você esqueça. Antes do prazo, antes de perder cliente, antes do caos. Você sempre lembrado.",
+      "Automático avisa antes que você esqueça. Antes do prazo, antes de perder cliente, antes do caos. Você sempre se lembra.",
     priority: "low",
     bullets: [
       "Aviso quando está próximo o prazo",

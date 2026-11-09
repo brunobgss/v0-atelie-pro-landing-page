@@ -15,7 +15,7 @@ export function AgendaFeatureSection() {
               </div>
 
               <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-                Mais Nunca Você Erra um Prazo (Ou Perde Dinheiro Por Isso)
+                Nunca Mais Você Erra um Prazo (Ou Perde Dinheiro Por Isso)
               </h2>
 
               <p className="text-xl text-slate-600 mb-8 leading-relaxed">

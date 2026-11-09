@@ -187,7 +187,7 @@ const plans: Plan[] = [
   {
     id: "professional-plus",
     name: "Profissional Plus",
-    description: "Para ateliés com maior volume de notas fiscais",
+    description: "Para ateliês com maior volume de notas fiscais",
     type: "professional",
     nfLimit: 300,
     features: [
@@ -230,7 +230,7 @@ const plans: Plan[] = [
   {
     id: "professional-enterprise",
     name: "Profissional Enterprise",
-    description: "Para ateliés de alto volume com até 1.000 notas/mês",
+    description: "Para ateliês de alto volume com até 1.000 notas/mês",
     type: "professional",
     nfLimit: 1000,
     features: [
@@ -336,7 +336,7 @@ export function PricingSection() {
             </h2>
             <p className="text-lg text-slate-600 max-w-2xl mx-auto text-pretty leading-relaxed">
               {/* linguagem simples e confiança */}
-              Comece grátis, cresça do seu jeito. Sem fidelidade, sem multa. Você quer sair? Saí. Você quer ficar? Agora está ganhando mais dinheiro.
+              Comece grátis, cresça do seu jeito. Sem fidelidade, sem multa. Você quer sair? Saia. Você quer ficar? Agora está ganhando mais dinheiro.
             </p>
           </div>
 
