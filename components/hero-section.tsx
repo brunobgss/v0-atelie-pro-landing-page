@@ -86,7 +86,7 @@ export function HeroSection() {
         </div>
 
         {/* ATELIEPRO_CHANGE: Melhoria 5 - Player de vídeo na hero section */}
-        <div id="demo-video" className="mx-auto mt-12 md:mt-8 max-w-6xl animate-fade-in px-2 sm:px-0" style={{ animationDelay: "0.8s" }}>
+        <div id="demo-video" className="mx-auto mt-12 md:mt-8 max-w-6xl animate-fade-in px-2 sm:px-0" style={{ animationDelay: "0.8s", scrollMarginTop: "80px" }}>
           <HeroVideoPlayer />
         </div>
       </div>
