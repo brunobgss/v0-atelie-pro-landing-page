@@ -573,6 +573,13 @@ export function PricingSection() {
             </div>
           </div>
 
+          {/* Indicador de swipe abaixo do carrossel - mobile only */}
+          <div className="md:hidden mt-6 flex items-center justify-center gap-2 text-sm text-slate-400 animate-bounce">
+            <span className="text-lg">←</span>
+            <span>Deslize</span>
+            <span className="text-lg">→</span>
+          </div>
+
           <div className="mt-12 space-y-4 text-center animate-fade-in" style={{ animationDelay: "0.45s" }}>
             <p className="inline-flex items-center justify-center gap-2 rounded-full border border-emerald-200/60 bg-white/80 px-6 py-3 text-sm font-medium text-slate-600 backdrop-blur">
               {/* prova social + urgência + redução de objeções */}
