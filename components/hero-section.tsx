@@ -17,18 +17,18 @@ export function HeroSection() {
         <div className="mx-auto max-w-5xl text-center">
           <Badge
             variant="secondary"
-            className="mb-8 md:mb-6 px-6 py-3 text-xs sm:text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-400/30 text-white shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
+            className="mb-6 md:mb-6 px-6 py-3 text-xs sm:text-sm font-medium bg-gradient-to-r from-purple-500/20 to-pink-500/20 backdrop-blur-sm border border-purple-400/30 text-white shadow-xl shadow-purple-500/25 hover:shadow-2xl hover:shadow-purple-500/40 transition-all duration-300 hover:scale-105"
           >
             {/* melhoria de conversão: urgência + eliminação de objeções */}
             <Sparkles className="w-4 h-4 mr-2 inline animate-pulse" />7 dias grátis • Sem cartão • Sem compromisso
           </Badge>
 
-          <h1 className="mb-8 md:mb-6 text-2xl font-bold tracking-tight text-balance text-white sm:text-3xl md:text-5xl lg:text-6xl font-sans animate-fade-in leading-snug">
+          <h1 className="mb-6 md:mb-6 text-2xl font-bold tracking-tight text-balance text-white sm:text-3xl md:text-5xl lg:text-6xl font-sans animate-fade-in leading-snug">
             Precificação Inteligente + Gestão de Pedidos em Um Lugar
           </h1>
 
           <p
-            className="mb-12 md:mb-10 text-base text-pretty text-purple-100 sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed animate-fade-in"
+            className="mb-10 md:mb-10 text-base text-pretty text-purple-100 sm:text-lg md:text-xl max-w-3xl mx-auto leading-relaxed animate-fade-in"
             style={{ animationDelay: "0.2s" }}
           >
             Aumente lucro em até 40%, organize pedidos, envie orçamentos profissionais no WhatsApp. Teste grátis por 7 dias, sem cartão.
