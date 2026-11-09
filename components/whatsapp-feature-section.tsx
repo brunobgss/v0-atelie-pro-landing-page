@@ -43,7 +43,7 @@ const steps = [
 
 export function WhatsAppFeatureSection() {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-primary/5 to-background">
+    <section className="py-16 md:py-20 lg:py-28 bg-gradient-to-b from-primary/5 to-background">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-12 lg:grid-cols-2 lg:items-start">

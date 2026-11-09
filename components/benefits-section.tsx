@@ -57,7 +57,7 @@ export function BenefitsSection() {
   return (
     <section
       id="beneficios"
-      className="py-20 md:py-28 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden"
+      className="py-16 md:py-20 lg:py-28 bg-gradient-to-b from-background to-muted/30 relative overflow-hidden"
     >
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:radial-gradient(ellipse_at_center,white,transparent)] -z-10" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-3xl animate-float -z-10" />

@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export function TestimonialsCTASection() {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-background via-slate-50 to-background relative overflow-hidden">
+    <section className="py-16 md:py-20 lg:py-28 bg-gradient-to-b from-background via-slate-50 to-background relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-20 w-72 h-72 bg-gradient-to-br from-purple-400/15 to-pink-400/15 rounded-full blur-3xl" />

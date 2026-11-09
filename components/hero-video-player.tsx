@@ -10,16 +10,16 @@ export function HeroVideoPlayer() {
   const videoRef = useRef<HTMLVideoElement>(null)
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-4 md:space-y-3">
       {/* Label above the player */}
       <div className="text-center">
-        <p className="text-sm md:text-base text-purple-300 font-medium">
+        <p className="text-xs sm:text-sm md:text-base text-purple-300 font-medium px-4">
           ▶ Veja como funciona em 2 minutos
         </p>
       </div>
 
       {/* Video player container */}
-      <div className="relative rounded-3xl border border-purple-400/30 bg-white/5 backdrop-blur-sm shadow-2xl shadow-purple-500/30 overflow-hidden hover:shadow-3xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-[1.02] group">
+      <div className="relative rounded-2xl md:rounded-3xl border border-purple-400/30 bg-white/5 backdrop-blur-sm shadow-2xl shadow-purple-500/30 overflow-hidden hover:shadow-3xl hover:shadow-purple-500/50 transition-all duration-500 hover:scale-[1.02] group">
         {!isPlaying ? (
           <button
             type="button"
@@ -44,8 +44,8 @@ export function HeroVideoPlayer() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/20 to-transparent pointer-events-none" />
 
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                <span className="flex h-20 w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-white/95 text-pink-600 shadow-2xl transition-transform duration-300 group-hover/btn:scale-110 group-hover/btn:bg-white pointer-events-auto">
-                  <Play className="h-8 w-8 md:h-10 md:w-10 fill-current" aria-hidden="true" />
+                <span className="flex h-16 w-16 sm:h-20 sm:w-20 md:h-24 md:w-24 items-center justify-center rounded-full bg-white/95 text-pink-600 shadow-2xl transition-transform duration-300 group-hover/btn:scale-110 group-hover/btn:bg-white pointer-events-auto">
+                  <Play className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 fill-current" aria-hidden="true" />
                 </span>
               </div>
 
@@ -74,8 +74,8 @@ export function HeroVideoPlayer() {
       </div>
 
       {/* Info text below player */}
-      <div className="mt-4 text-center rounded-xl bg-purple-50/60 border border-purple-200/40 p-3 backdrop-blur-sm">
-        <p className="text-xs text-purple-700 font-medium">
+      <div className="mt-4 text-center rounded-xl bg-purple-50/60 border border-purple-200/40 p-3 md:p-4 backdrop-blur-sm mx-4 sm:mx-0">
+        <p className="text-xs sm:text-sm text-purple-700 font-medium leading-relaxed">
           ▶️ Assista como o Ateliê Pro organiza tudo em poucos minutos. Sem instalação, sem complicação.
         </p>
       </div>

@@ -113,7 +113,7 @@ export function TestimonialsSection() {
   }
 
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+    <section className="py-16 md:py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0.6))] -z-10" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl -z-10" />
 

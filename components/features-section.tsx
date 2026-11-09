@@ -186,7 +186,7 @@ const features = [
 
 export function FeaturesSection() {
   return (
-    <section id="funcionalidades" className="py-20 md:py-28 bg-white">
+    <section id="funcionalidades" className="py-16 md:py-20 lg:py-28 bg-white">
       <div className="container px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="text-center mb-16">
@@ -235,14 +235,16 @@ export function FeaturesSection() {
                           </div>
                         </div>
                         {feature.screenshot && (
-                          <div className="rounded-2xl overflow-hidden border border-purple-200/50 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+                          <div className="rounded-lg sm:rounded-2xl overflow-hidden border border-purple-200/50 shadow-lg hover:shadow-xl transition-all duration-300 group-hover:scale-105">
                             <Image
                               src={feature.screenshot || "/placeholder.svg"}
                               alt={feature.title}
                               width={800}
                               height={450}
                               className="w-full h-auto object-cover"
-                              quality={85}
+                              quality={90}
+                              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 800px"
+                              priority={feature.priority === "high"}
                             />
                           </div>
                         )}

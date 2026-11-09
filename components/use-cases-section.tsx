@@ -47,7 +47,7 @@ const useCases = [
 
 export function UseCasesSection() {
   return (
-    <section className="py-20 md:py-28 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
+    <section className="py-16 md:py-20 lg:py-28 bg-gradient-to-b from-muted/30 to-background relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
       <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl -z-10" />
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-3xl -z-10" />
